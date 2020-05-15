@@ -1,0 +1,393 @@
+// Pre-overrides
+// =============
+
+// Colours
+$theme-colors: (
+  "primary": #ab8073,
+  "success": #63a844,//#43a047,
+  "info": #00acc1,
+  "warning": #ebdc14,//#ffb300,
+  "danger": #e53935,
+  "dark": #6b2e20
+);
+
+$field-colors: (
+  "keyword": #d0b7ad,
+  "datatype": #fff5c2,
+  "location": #bbdefb,
+);
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 672px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Typography
+$font-family-sans-serif:  "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$link-color: #0d47a1;
+
+// Forms
+$form-text-margin-top: 1rem;
+
+// Required
+// ========
+
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+// Post-overrides
+// ==============
+// These reference/overwrite settings defined in the files above. If they
+// replace variables, these replacements won't affect any use of the variables
+// before this point.
+
+// Grid
+$container-max-widths: (
+  sm: 448px,
+  md: 640px,
+  lg: 752px,
+);
+
+// Typography
+$headings-margin-bottom:  $spacer * 2;
+$h1-font-size:            $font-size-base * 3;
+$h2-font-size:            $font-size-base * 2.125;
+$headings-font-weight:    300;
+
+// Navbar
+$navbar-padding-y:          $spacer * 0.75;
+$navbar-dark-color:         rgba($white, .8);
+$navbar-dark-hover-color:   $white;
+$navbar-nav-link-padding-x: 1rem;
+
+// Reimplement v3 style validation code
+@mixin form-validation-state($state, $color, $icon) {
+  .#{$state}-feedback {
+    width: 100%;
+    margin-top: $form-feedback-margin-top;
+    @include font-size($form-feedback-font-size);
+    color: $color;
+  }
+
+  .#{$state}-tooltip {
+    position: absolute;
+    top: 100%;
+    z-index: 5;
+    max-width: 100%; // Contain to parent when possible
+    padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
+    margin-top: .1rem;
+    @include font-size($form-feedback-tooltip-font-size);
+    line-height: $form-feedback-tooltip-line-height;
+    color: color-yiq($color);
+    background-color: rgba($color, $form-feedback-tooltip-opacity);
+    @include border-radius($form-feedback-tooltip-border-radius);
+  }
+
+  .is-#{$state} {
+    label {
+      color: $color;
+    }
+
+    .form-control {
+      border-color: $color;
+
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-image: escape-svg($icon);
+        background-repeat: no-repeat;
+        background-position: right $input-height-inner-quarter center;
+        background-size: $input-height-inner-half $input-height-inner-half;
+      }
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+    }
+
+    textarea.form-control {
+      @if $enable-validation-icons {
+        padding-right: $input-height-inner;
+        background-position: top $input-height-inner-quarter right $input-height-inner-quarter;
+      }
+    }
+
+    .custom-select {
+      border-color: $color;
+
+      @if $enable-validation-icons {
+        padding-right: $custom-select-feedback-icon-padding-right;
+        background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+      }
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+      }
+    }
+
+    .form-check-input {
+      ~ .form-check-label {
+        color: $color;
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+    }
+
+    .custom-control-input {
+      ~ .custom-control-label {
+        color: $color;
+
+        &::before {
+          border-color: $color;
+        }
+      }
+
+      &:checked {
+        ~ .custom-control-label::before {
+          border-color: lighten($color, 10%);
+          @include gradient-bg(lighten($color, 10%));
+        }
+      }
+
+      &:focus {
+        ~ .custom-control-label::before {
+          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+
+        &:not(:checked) ~ .custom-control-label::before {
+          border-color: $color;
+        }
+      }
+    }
+
+    // custom file
+    .custom-file-input {
+      ~ .custom-file-label {
+        border-color: $color;
+      }
+
+      &:focus {
+        ~ .custom-file-label {
+          border-color: $color;
+          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        }
+      }
+    }
+  }
+}
+
+// Optional
+// ========
+
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+//@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/code";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/tables";
+@import "../bootstrap/scss/forms";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/transitions";
+//@import "../bootstrap/scss/dropdown";
+//@import "../bootstrap/scss/button-group";
+@import "../bootstrap/scss/input-group";
+@import "../bootstrap/scss/custom-forms";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+//@import "../bootstrap/scss/card";
+//@import "../bootstrap/scss/breadcrumb";
+//@import "../bootstrap/scss/pagination";
+//@import "../bootstrap/scss/badge";
+//@import "../bootstrap/scss/jumbotron";
+@import "../bootstrap/scss/alert";
+//@import "../bootstrap/scss/progress";
+//@import "../bootstrap/scss/media";
+//@import "../bootstrap/scss/list-group";
+@import "../bootstrap/scss/close";
+//@import "../bootstrap/scss/toasts";
+//@import "../bootstrap/scss/modal";
+//@import "../bootstrap/scss/tooltip";
+//@import "../bootstrap/scss/popover";
+//@import "../bootstrap/scss/carousel";
+//@import "../bootstrap/scss/spinners";
+@import "../bootstrap/scss/utilities";
+@import "../bootstrap/scss/print";
+
+// Local style rules
+// =================
+
+// A bit more space around the headings
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: $headings-margin-bottom + ($spacer / 2);
+}
+
+// Descriptions may or may not be wrapped in a <p>
+
+div.description {
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+div.description {
+  p:last-child,
+  ol:last-child,
+  ul:last-child,
+  dl:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Add more space in nested lists
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-bottom: .75rem;
+}
+
+// Change bullet styles for deeply nested lists
+ul ul ul ul > li {
+  list-style-type: disc;
+  list-style-type: "–  ";
+}
+
+ul ul ul ul ul > li {
+  list-style-type: circle;
+  list-style-type: "»  ";
+}
+
+ul ul ul ul ul ul > li {
+  list-style-type: square;
+  list-style-type: "›  ";
+}
+
+// Flex dls are compact, so work on assumption of one dt/dd per list.
+
+dl div.d-flex {
+  dt {
+    margin-right: 0.5rem;
+
+    &:after {
+      content: ":";
+    }
+  }
+
+  dd {
+    flex-shrink: 1;
+  }
+}
+
+// Tool and organization types
+div.types {
+  padding-top: 16px;
+}
+
+// Displaying certain lists of links as series of buttons
+
+@each $color, $value in $field-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+    margin-top: map-get($spacers, 1);
+    margin-bottom: map-get($spacers, 1);
+  }
+}
+
+div {
+  &.keywords,
+  &.dataTypes {
+    p {
+      padding-top: $btn-padding-y;
+      padding-bottom: $btn-padding-y;
+      margin-top: map-get($spacers, 1);
+      margin-bottom: map-get($spacers, 1);
+      border: $btn-border-width solid transparent;
+      line-height: $btn-line-height;
+    }
+  }
+}
+
+// Shading for dl rows
+dl.dl-striped {
+  div:nth-of-type(#{$table-striped-order}) {
+    background-color: $table-accent-bg;
+  }
+
+  div {
+    padding-top: .5rem;
+  }
+}
+
+// Special formats for form controls
+
+label {
+  font-weight: bold;
+
+  &.custom-control-label {
+    font-weight: inherit;
+  }
+}
+
+ol.form-list li + li {
+  padding-top: 1rem;
+}
+
+.form-block .form-text li + li {
+  margin-top: .5rem;
+}
+
+.form-subgroup {
+  margin-bottom: $form-group-margin-bottom / 2;
+}
+
+fieldset {
+  margin-bottom: $spacer * 1.5;
+}
+
+// Special formatting for the header
+
+header {
+  margin-bottom: $spacer;
+}
+
+// Special formatting for page actions
+
+aside {
+  margin-top: $spacer * 2.5;
+}
+
+// Special formatting for the footer
+
+footer {
+  margin-top: $spacer * 4;
+  background-color: #eee;
+  background-image: linear-gradient(#bdbdbd, #eee 17%, #eee 67%, #fff);
+  color: #757575;
+}
+
+footer.navbar {
+  border-radius: 0;
+  border: none;
+  padding: 0 1rem;
+}
+
+footer .navbar-nav > li > a {
+  color: #757575;
+  padding: 1rem;
+
+  :hover,
+  :focus {
+    text-decoration: none;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(#bdbdbd, #f5f5f5 17%, #f5f5f5 67%, #fff);
+  }
+}

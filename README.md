@@ -1,2 +1,16 @@
 # metadata-catalog-data
-Support files used to generate and backup data and components for the Metadata Standards Catalog
+
+Support files used to generate and backup data and components for the Metadata
+Standards Catalog
+
+## Contents
+
+  - `css` contains the code used to generate the Metadata Standards Catalog
+    stylesheet. It is generated from [Bootstrap v4] sources with customizations
+    using a SASS/SCSS compiler.
+
+  - `keywords` contains Python v3 code used to generate the Metadata Standards
+    Catalog subject keyword thesaurus from the [UNESCO Thesaurus].
+
+[Bootstrap v4]: https://getbootstrap.com/
+[UNESCO Thesaurus]: http://vocabularies.unesco.org/
