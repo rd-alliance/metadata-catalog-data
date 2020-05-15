@@ -130,3 +130,8 @@ dmypy.json
 
 # Compiled CSS
 /css/css/
+
+# Compiled vocabulary files
+/vocab/simplified-unesco-thesaurus.ttl
+/vocab/keyword_tree.md
+/vocab/vocabulary.json

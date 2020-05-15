@@ -9,8 +9,9 @@ Standards Catalog
     stylesheet. It is generated from [Bootstrap v4] sources with customizations
     using a SASS/SCSS compiler.
 
-  - `keywords` contains Python v3 code used to generate the Metadata Standards
-    Catalog subject keyword thesaurus from the [UNESCO Thesaurus].
+  - `vocab` contains Python v3 code used to generate the Metadata Standards
+    Catalog subject keyword thesaurus from the [UNESCO Thesaurus] and a starter
+    set of controlled terms for recording the type of various things.
 
 [Bootstrap v4]: https://getbootstrap.com/
 [UNESCO Thesaurus]: http://vocabularies.unesco.org/
