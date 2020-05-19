@@ -70,7 +70,7 @@ included is from 2020-03-03) and generates two files:
 
   - `simplified-unesco-thesaurus.ttl` is the file needed by the Catalog.
 
-  - `keyword_tree.md` outputs the resulting terms in a nested list for easy
+  - `keyword_tree.md` renders the resulting terms in a nested list for easy
     inspection. If any duplicate Concepts are introduced, they are listed at
     the end for review.
 
