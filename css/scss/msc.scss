@@ -227,8 +227,7 @@ $navbar-nav-link-padding-x: 1rem;
 // =================
 
 // A bit more space around the headings
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: $headings-margin-bottom + ($spacer / 2);
 }
 
@@ -271,8 +270,7 @@ ul ul ul ul ul ul > li {
   list-style-type: "›  ";
 }
 
-// Flex dls are compact, so work on assumption of one dt/dd per list.
-
+// Adjustments to handle flexbox dls.
 dl div.d-flex {
   dt {
     margin-right: 0.5rem;
@@ -289,7 +287,7 @@ dl div.d-flex {
 
 // Tool and organization types
 div.types {
-  padding-top: 16px;
+  padding-top: map-get($spacers, 3);;
 }
 
 // Displaying certain lists of links as series of buttons
@@ -314,6 +312,12 @@ div {
       line-height: $btn-line-height;
     }
   }
+}
+
+// Adjustments to cards so they are a bit more like v3
+.card .card-header .card-title {
+  @include font-size($h5-font-size);
+  margin-bottom: 0;
 }
 
 // Shading for dl rows
