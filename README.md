@@ -9,6 +9,11 @@ Standards Catalog
     stylesheet. It is generated from [Bootstrap v4] sources with customizations
     using a SASS/SCSS compiler.
 
+  - `dbtools` contains code for migrating data between MSD, MSCv1 and MSCv2
+    databases, in both compiled and decompiled form.
+
+  - `users` contains code that can be used to (un)block users.
+
   - `vocab` contains Python v3 code used to generate the Metadata Standards
     Catalog subject keyword thesaurus from the [UNESCO Thesaurus] and a starter
     set of controlled terms for recording the type of various things.
