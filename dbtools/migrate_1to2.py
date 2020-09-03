@@ -55,6 +55,11 @@ table_map = {
     "endorsements": "e",
 }
 
+datatype_map = {
+    'Catalog': 'msc:datatype1',
+    'Dataset': 'msc:datatype2',
+}
+
 kw_map = dict()
 with open(kw_mapping, 'r') as f:
     current_url = None
@@ -115,11 +120,18 @@ for in_table, out_table in table_map.items():
                 for ent in v:
                     if relations.get(f"msc:{out_table}{j}", dict()).get(
                             f"{ent['role']}s") is None:
-                        relations[f"msc:{out_table}{j}"][f"{ent['role']}s"
-                                                         ] = list()
+                        relations[f"msc:{out_table}{j}"][
+                            f"{ent['role']}s"] = list()
                     relations[f"msc:{out_table}{j}"][f"{ent['role']}s"].append(
                         ent['id'])
                 continue
+            elif k == 'dataTypes':
+                old_v = v[:]
+                v = list()
+                for datatype in old_v:
+                    label = datatype.get('label')
+                    if label is not None and label in datatype_map:
+                        v.append(datatype_map[label])
             elif k == 'versions':
                 old_v = v[:]
                 v = list()
