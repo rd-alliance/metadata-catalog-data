@@ -5,6 +5,10 @@ Standards Catalog
 
 ## Contents
 
+  - `backup` contains an occasional public backup of the main record and
+    controlled terms databases. (The subject thesaurus is read-only; see the
+    `vocab` folder.)
+
   - `css` contains the code used to generate the Metadata Standards Catalog
     stylesheet. It is generated from [Bootstrap v4] sources with customizations
     using a SASS/SCSS compiler.
