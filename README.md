@@ -10,7 +10,7 @@ Standards Catalog
     using a SASS/SCSS compiler.
 
   - `dbtools` contains code for migrating data between MSD, MSCv1 and MSCv2
-    databases, in both compiled and decompiled form.
+    databases.
 
   - `users` contains code that can be used to (un)block users.
 
