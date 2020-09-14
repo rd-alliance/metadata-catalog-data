@@ -19,7 +19,10 @@ Standards Catalog
   - `maintenance-mode` contains an HTML template for use when the Catalog is
     down for maintenance.
 
-  - `users` contains code that can be used to (un)block users.
+  - `users` contains code that can be used to (un)block users. It is recommended
+    that the `rdamsc_userctl` module is installed into the virtual environment
+    running the Catalog so all the dependency modules are at the same version
+    as the Catalog itself.
 
   - `vocab` contains Python v3 code used to generate the Metadata Standards
     Catalog subject keyword thesaurus from the [UNESCO Thesaurus] and a starter
