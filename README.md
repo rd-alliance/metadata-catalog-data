@@ -16,6 +16,9 @@ Standards Catalog
   - `dbtools` contains code for migrating data between MSD, MSCv1 and MSCv2
     databases.
 
+  - `maintenance-mode` contains an HTML template for use when the Catalog is
+    down for maintenance.
+
   - `users` contains code that can be used to (un)block users.
 
   - `vocab` contains Python v3 code used to generate the Metadata Standards
