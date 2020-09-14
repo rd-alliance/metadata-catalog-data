@@ -8,7 +8,6 @@
 import argparse
 import os
 import sys
-import json
 import re
 import random
 import string
@@ -27,16 +26,7 @@ from dulwich.errors import NotGitRepository
 import dulwich.porcelain as git
 
 # See https://passlib.readthedocs.io/
-import passlib.apps as pwd_context
-
-# Utility definitions
-# ===================
-def json_serial(obj):
-    """JSON serializer for objects not serializable by default json code."""
-    if isinstance(obj, date):
-        serial = obj.isoformat()
-        return serial
-    raise TypeError('Type not serializable')
+from passlib.apps import custom_app_context as pwd_context
 
 
 # Initializing
@@ -62,7 +52,7 @@ apiuser_argument = {'help': 'user ID of the API user'}
 
 # Here is the actual parser:
 parser = argparse.ArgumentParser(
-    prog='python3 -m userctl',
+    prog='python3 -m rdamsc_userctl',
     description='Metadata Standards Catalog User Control Tool.'
                 ' Registers new API users, and blocks/unblocks both API and'
                 ' regular users.')

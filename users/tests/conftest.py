@@ -8,7 +8,7 @@ from dulwich.errors import NotGitRepository
 import dulwich.porcelain as git
 
 import pytest
-import userctl
+import rdamsc_userctl
 
 
 class App(object):
@@ -39,7 +39,7 @@ class App(object):
 
     def main(self, *args):
         sys.argv = ["userctl/__main__.py", *args]
-        userctl.main()
+        rdamsc_userctl.main()
 
     def get_last_commit(self):
         try:
