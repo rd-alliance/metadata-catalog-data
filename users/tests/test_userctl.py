@@ -16,8 +16,8 @@ def test_userctl(app):
     assert user2.get("blocked") is None
     commit = app.get_last_commit()
     assert commit.author == "MSCWG <mscwg@rda-groups.org>".encode('utf8')
-    assert commit.message == (f"Block user {userid}\n\nChanged by userctl"
-                              .encode('utf8'))
+    assert commit.message == (
+        f"Block user {userid}\n\nChanged by userctl".encode('utf8'))
 
     # Unblock normal user
     app.main("-u", app.path, "unblock-user", userid)
@@ -30,8 +30,8 @@ def test_userctl(app):
     assert user2.get("blocked") is None
     commit = app.get_last_commit()
     assert commit.author == "MSCWG <mscwg@rda-groups.org>".encode('utf8')
-    assert commit.message == (f"Unblock user {userid}\n\nChanged by userctl"
-                              .encode('utf8'))
+    assert commit.message == (
+        f"Unblock user {userid}\n\nChanged by userctl".encode('utf8'))
 
     # Normal user not found
     with pytest.raises(SystemExit) as failure:
@@ -43,7 +43,8 @@ def test_userctl(app):
     apiusername = "API Tester"
     apiuserid = "apitest"
     apiusermail = "test.app@example.com"
-    app.main("-u", app.path, "add-api-user", apiusername, apiuserid, apiusermail)
+    app.main(
+        "-u", app.path, "add-api-user", apiusername, apiuserid, apiusermail)
     apiuser1 = app.apiusers().get("1")
     assert apiuser1.get("name") == apiusername
     assert apiuser1.get("userid") == apiuserid
@@ -52,12 +53,13 @@ def test_userctl(app):
     assert apiuser1.get("blocked") is None
     commit = app.get_last_commit()
     assert commit.author == "MSCWG <mscwg@rda-groups.org>".encode('utf8')
-    assert commit.message == (f"Add API user {apiusername}\n\nChanged by userctl"
-                              .encode('utf8'))
+    assert commit.message == (
+        f"Add API user {apiusername}\n\nChanged by userctl".encode('utf8'))
 
     # Bad username
     with pytest.raises(SystemExit) as failure:
-        app.main("-u", app.path, "add-api-user", apiusername, "quäck^", apiusermail)
+        app.main(
+            "-u", app.path, "add-api-user", apiusername, "quäck^", apiusermail)
         assert failure.type == SystemExit
         assert failure.value.code == 1
 
@@ -76,8 +78,8 @@ def test_userctl(app):
     assert apiuser1.get("blocked") is True
     commit = app.get_last_commit()
     assert commit.author == "MSCWG <mscwg@rda-groups.org>".encode('utf8')
-    assert commit.message == (f"Block user {apiuserid}\n\nChanged by userctl"
-                              .encode('utf8'))
+    assert commit.message == (
+        f"Block user {apiuserid}\n\nChanged by userctl".encode('utf8'))
 
     # Unblock API user
     app.main("-u", app.path, "unblock-api-user", apiuserid)
@@ -88,8 +90,8 @@ def test_userctl(app):
     assert apiuser1.get("blocked") is False
     commit = app.get_last_commit()
     assert commit.author == "MSCWG <mscwg@rda-groups.org>".encode('utf8')
-    assert commit.message == (f"Unblock user {apiuserid}\n\nChanged by userctl"
-                              .encode('utf8'))
+    assert commit.message == (
+        f"Unblock user {apiuserid}\n\nChanged by userctl".encode('utf8'))
 
     # API user not found
     with pytest.raises(SystemExit) as failure:
