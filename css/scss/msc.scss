@@ -270,7 +270,12 @@ ul ul ul ul ul ul > li {
   list-style-type: "›  ";
 }
 
-// Adjustments to handle flexbox dls.
+// Compensate for additional margin-bottom on <dd>s
+dl {
+  margin-bottom: 0.5rem;
+}
+
+// Adjustments to handle flexbox <dl>s
 dl div.d-flex {
   dt {
     margin-right: 0.5rem;
