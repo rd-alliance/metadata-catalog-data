@@ -255,14 +255,14 @@
    ]
   },
   "11": {
-   "description": "<p>A set of mandatory metadata that must be registered with the DataCite Metadata Store when minting a DOI persistent identifier for a dataset. The domain-agnostic properties were chosen for their ability to aid in accurate and consistent identification of data for citation and retrieval purposes.</p><p>Sponsored by the DataCite consortium, version 3.0 was recently released in 2013.</p>",
+   "description": "<p>A set of mandatory metadata that must be registered with the DataCite Metadata Store when minting a DOI persistent identifier for a dataset. The domain-agnostic properties were chosen for their ability to aid in accurate and consistent identification of data for citation and retrieval purposes.</p><p>The scheme is maintained by the DataCite Metadata Working Group in consultation with DataCite members and under the guidance of the DataCite Board.</p>",
    "keywords": [
     "http://rdamsc.bath.ac.uk/thesaurus/domain0"
    ],
    "locations": [
     {
-     "type": "website",
-     "url": "http://schema.datacite.org"
+     "url": "http://schema.datacite.org",
+     "type": "website"
     }
    ],
    "slug": "datacite-metadata-schema",
@@ -387,6 +387,78 @@
       }
      ],
      "number": "4.0"
+    },
+    {
+     "number": "4.1",
+     "issued": "2017-10-23",
+     "locations": [
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.1/doc/DataCite-MetadataKernel_v4.1.pdf",
+       "type": "document"
+      },
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.1/metadata.xsd",
+       "type": "XSD"
+      }
+     ],
+     "identifiers": [
+      {
+       "id": "10.5438/0014",
+       "scheme": "DOI"
+      },
+      {
+       "id": "10.5438/0015",
+       "scheme": "DOI"
+      }
+     ]
+    },
+    {
+     "number": "4.2",
+     "issued": "2019-03-20",
+     "locations": [
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.2/doc/DataCite-MetadataKernel_v4.2.pdf",
+       "type": "document"
+      },
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.2/metadata.xsd",
+       "type": "XSD"
+      }
+     ],
+     "identifiers": [
+      {
+       "id": "10.5438/bmjt-bx77",
+       "scheme": "DOI"
+      },
+      {
+       "id": "10.5438/rv0g-av03",
+       "scheme": "DOI"
+      }
+     ]
+    },
+    {
+     "number": "4.3",
+     "issued": "2019-08-16",
+     "locations": [
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.3/doc/DataCite-MetadataKernel_v4.3.pdf",
+       "type": "document"
+      },
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.3/metadata.xsd",
+       "type": "XSD"
+      }
+     ],
+     "identifiers": [
+      {
+       "id": "10.14454/7xq3-zf69",
+       "scheme": "DOI"
+      },
+      {
+       "id": "10.14454/f2wp-s162",
+       "scheme": "DOI"
+      }
+     ]
     }
    ]
   },
@@ -2134,8 +2206,12 @@
    ],
    "locations": [
     {
-     "type": "website",
-     "url": "https://more.metadatacenter.org/tools-training/outreach/cedar-template-model"
+     "url": "https://more.metadatacenter.org/tools-training/outreach/cedar-template-model",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/metadatacenter/cedar-model-validation-library",
+     "type": "JSON"
     }
    ],
    "slug": "cedar-template-model",
@@ -2151,6 +2227,9 @@
      ],
      "number": "1.5.0"
     }
+   ],
+   "dataTypes": [
+    "msc:datatype1"
    ]
   },
   "95": {
@@ -2447,6 +2526,42 @@
       }
      ],
      "issued": "2007-11-02"
+    }
+   ]
+  },
+  "100": {
+   "title": "EngMeta",
+   "description": "<p>EngMeta is an XML-based formal definition of information necessary to find, understand, reproduce and reuse data from engineering disciplines. The schema was defined together with engineers from aerodynamics and thermodynamics and lies a focus on computational engineering, but is general enough to cover other engineering disciplines.</p><p>EngMeta defines metadata-fields for the description of the components of the observed system (object of research), the observed variables, the spatial and temporal resolution of the observation and the steps taken in the research process to generate, process, analyse and visualize the data. It is based on existing standards like DataCite, PREMIS, CodeMeta and ExptML and is implemented as two metadata blocks for repositories based on the open-source repository platform Dataverse.</p>",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept623"
+   ],
+   "locations": [
+    {
+     "url": "https://www.izus.uni-stuttgart.de/fokus/engmeta",
+     "type": "website"
+    }
+   ],
+   "slug": "engmeta",
+   "versions": [
+    {
+     "number": "0.2",
+     "issued": "2019-12-20",
+     "locations": [
+      {
+       "url": "https://doi.org/10.18419/darus-500/2",
+       "type": "document"
+      },
+      {
+       "url": "https://doi.org/10.18419/darus-500/3",
+       "type": "XSD"
+      }
+     ],
+     "samples": [
+      {
+       "title": "EngMeta_example_v0.2.xml",
+       "url": "https://doi.org/10.18419/darus-500/1"
+      }
+     ]
     }
    ]
   }
@@ -4622,6 +4737,36 @@
     }
    ],
    "slug": "openaire-provide-validator-service"
+  },
+  "68": {
+   "title": "ExtractIng",
+   "description": "ExtractIng is a prototypical tool developed at the High Performance Computing Center Stuttgart to parse existing metadata out of textual files like input or log files and convert this information into the EngMeta metadata scheme. It can be used to automate metadata capture within the research process. ExtractIng is configurable in a very flexible way to support different input formats.",
+   "types": [
+    "terminal (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/bjschembera/ExtractIng",
+     "type": "source"
+    }
+   ],
+   "creators": [
+    {
+     "givenName": "Björn",
+     "familyName": "Schembera"
+    }
+   ],
+   "slug": "extracting",
+   "versions": [
+    {
+     "number": "0.8",
+     "issued": "2020-03-20"
+    },
+    {
+     "number": "0.82",
+     "issued": "2020-09-02"
+    }
+   ]
   }
  },
  "c": {
@@ -6628,6 +6773,25 @@
    "maintainers": [
     "msc:g118"
    ]
+  },
+  "187": {
+   "parent schemes": [
+    "msc:m11",
+    "msc:m31"
+   ],
+   "@id": "msc:m100"
+  },
+  "188": {
+   "supported schemes": [
+    "msc:m100"
+   ],
+   "@id": "msc:t68"
+  },
+  "189": {
+   "funders": [
+    "msc:g105"
+   ],
+   "@id": "msc:m94"
   }
  }
 }
