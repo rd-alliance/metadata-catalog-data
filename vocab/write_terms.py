@@ -33,8 +33,8 @@ location_tuples = [
     ('RDFS', 'RDF Schema', ['m']),
     ('JSON', 'JSON Schema', ['m']),
     ('RDA-MIG', 'RDA MIG Schema', ['m']),
-    ('application', 'application', ['t']),
-    ('service', 'service endpoint', ['t'])]
+    ('application', 'web application', ['t', 'c']),
+    ('service', 'service endpoint', ['t', 'c'])]
 
 for language in programming_languages:
     location_tuples.append(
