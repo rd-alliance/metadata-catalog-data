@@ -459,6 +459,36 @@
        "scheme": "DOI"
       }
      ]
+    },
+    {
+     "number": "4.4",
+     "issued": "2021-03-30",
+     "locations": [
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.4/doc/DataCite-MetadataKernel_v4.4.pdf",
+       "type": "document"
+      },
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.4/metadata.xsd",
+       "type": "XSD"
+      }
+     ],
+     "identifiers": [
+      {
+       "id": "10.14454/3w3z-sa82",
+       "scheme": "DOI"
+      },
+      {
+       "id": "10.14454/fxws-0523",
+       "scheme": "DOI"
+      }
+     ],
+     "samples": [
+      {
+       "title": "Full DataCite XML example",
+       "url": "https://schema.datacite.org/meta/kernel-4.4/example/datacite-example-full-v4.xml"
+      }
+     ]
     }
    ]
   },
@@ -5237,15 +5267,15 @@
    ]
   },
   "24": {
-   "description": "<p>This document provides a simple mapping from the SPASE Data Model to the OAI-PMH profile of Dublin Core. The mapping is also available as an XML Stylesheet transformation.</p>",
+   "description": "<p>This XML Stylesheet transformation provides a simple mapping from the SPASE Data Model to the OAI-PMH profile of Dublin Core. A textual description of the mapping is available from the Internet Archive Wayback Machine.</p>",
    "locations": [
     {
-     "type": "document",
-     "url": "http://www.spase-group.org/tools/stylesheet/oai/"
+     "url": "https://spase-group.org/tools/stylesheet/oai.xsl",
+     "type": "library (XML)"
     },
     {
-     "type": "library (XML)",
-     "url": "http://www.spase-group.org/tools/stylesheet/oai/oai.xsl"
+     "url": "https://web.archive.org/web/20150907175700/http://www.spase-group.org/tools/stylesheet/oai/",
+     "type": "document"
     }
    ],
    "slug": "spase-data-model_TO_dublin-core"
