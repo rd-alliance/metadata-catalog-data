@@ -132,6 +132,7 @@ dmypy.json
 /css/css/
 
 # User-supplied files
+/backup/.git
 /old-db
 
 # Compiled files

@@ -2594,6 +2594,45 @@
      ]
     }
    ]
+  },
+  "101": {
+   "title": "schema.org",
+   "description": " Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.\r\n\r\nSchema.org vocabulary can be used with many different encodings, including RDFa, Microdata and JSON-LD. These vocabularies cover entities, relationships between entities and actions, and can easily be extended through a well-documented extension model. Over 10 million sites use Schema.org to markup their web pages and email messages. Many applications from Google, Microsoft, Pinterest, Yandex and others already use these vocabularies to power rich, extensible experiences. ",
+   "locations": [
+    {
+     "url": "https://schema.org/",
+     "type": "website"
+    },
+    {
+     "url": "https://schema.org/version/latest/schemaorg-current-http.ttl",
+     "type": "RDFS"
+    }
+   ],
+   "slug": "schemaorg"
+  },
+  "102": {
+   "title": "RO-Crate",
+   "description": "RO-Crate is a community effort to establish a lightweight approach to packaging research data with their metadata. It is based on schema.org annotations in JSON-LD, and aims to make best-practice in formal metadata description accessible and practical for use in a wider variety of situations, from an individual researcher working with a folder of data, to large data-intensive computational research environments.",
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://w3id.org/ro/crate",
+     "type": "website"
+    },
+    {
+     "url": "https://w3id.org/ro/crate/1.1",
+     "type": "document"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.5281/zenodo.3406497",
+     "scheme": "DOI"
+    }
+   ],
+   "slug": "ro-crate"
   }
  },
  "g": {
@@ -3968,6 +4007,20 @@
     }
    ],
    "slug": "institute-for-quantitative-social-science-iqss"
+  },
+  "123": {
+   "name": "Research Object",
+   "description": "Research Object is a community effort to develop mechanisms to capture, describe and publish the aggregation of digital research outputs as a structured artifact in its own right, using existing Linked Data standards.",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.researchobject.org/",
+     "type": "website"
+    }
+   ],
+   "slug": "research-object"
   }
  },
  "t": {
@@ -6822,6 +6875,26 @@
     "msc:g105"
    ],
    "@id": "msc:m94"
+  },
+  "190": {
+   "parent schemes": [
+    "msc:m12",
+    "msc:m95"
+   ],
+   "@id": "msc:m101"
+  },
+  "191": {
+   "parent schemes": [
+    "msc:m95",
+    "msc:m101"
+   ],
+   "@id": "msc:m102",
+   "maintainers": [
+    "msc:g123"
+   ]
+  },
+  "192": {
+   "@id": "msc:m95"
   }
  }
 }
