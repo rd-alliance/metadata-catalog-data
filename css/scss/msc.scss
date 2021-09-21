@@ -276,17 +276,25 @@ dl {
 }
 
 // Adjustments to handle flexbox <dl>s
-dl div.d-flex {
-  dt {
-    margin-right: 0.5rem;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    &:after {
-      content: ":";
+    @each $value in $displays {
+      dl div.d#{$infix}-#{$value} {
+        dt {
+          margin-right: 0.5rem;
+
+          &:after {
+            content: ":";
+          }
+        }
+
+        dd {
+          flex-shrink: 1;
+        }
+      }
     }
-  }
-
-  dd {
-    flex-shrink: 1;
   }
 }
 
