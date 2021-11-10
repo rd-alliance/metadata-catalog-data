@@ -623,7 +623,87 @@
     }
    ],
    "slug": "dublin-core",
-   "title": "Dublin Core"
+   "title": "Dublin Core",
+   "versions": [
+    {
+     "number": "1.0",
+     "title": "Dublin Core Metadata Element Set",
+     "issued": "1998-09"
+    },
+    {
+     "number": "1.1",
+     "title": "Dublin Core Metadata Element Set",
+     "issued": "1999-07-02",
+     "valid": {
+      "start": "1999-07-02"
+     },
+     "namespaces": [
+      {
+       "prefix": "dc",
+       "uri": "http://purl.org/dc/elements/1.1/"
+      }
+     ]
+    },
+    {
+     "number": "2003-02-12",
+     "title": "DCMI Metadata Terms",
+     "issued": "2003-02-12"
+    },
+    {
+     "number": "2003-03-04",
+     "title": "DCMI Metadata Terms",
+     "issued": "2003-03-04"
+    },
+    {
+     "number": "2003-11-19",
+     "title": "DCMI Metadata Terms",
+     "issued": "2003-11-19"
+    },
+    {
+     "number": "2004-06-14",
+     "title": "DCMI Metadata Terms",
+     "issued": "2004-06-14"
+    },
+    {
+     "number": "2004-09-20",
+     "title": "DCMI Metadata Terms",
+     "issued": "2004-09-20"
+    },
+    {
+     "number": "2004-12-20",
+     "title": "DCMI Metadata Terms",
+     "issued": "2004-12-20"
+    },
+    {
+     "number": "2005-01-10",
+     "title": "DCMI Metadata Terms",
+     "issued": "2005-01-10"
+    },
+    {
+     "number": "2005-06-13",
+     "title": "DCMI Metadata Terms",
+     "issued": "2005-06-13"
+    },
+    {
+     "number": "2020-01-20",
+     "title": "DCMI Metadata Terms",
+     "issued": "2020-01-20"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "dcterms",
+     "uri": "http://purl.org/dc/terms/"
+    },
+    {
+     "prefix": "dcmitype",
+     "uri": "http://purl.org/dc/dcmitype/"
+    },
+    {
+     "prefix": "dcam",
+     "uri": "http://purl.org/dc/dcam/"
+    }
+   ]
   },
   "16": {
    "description": "<p>Ecological Metadata Language (EML) is a metadata specification particularly developed for the ecology discipline. It is based on prior work done by the Ecological Society of America and associated efforts (Michener et al., 1997, Ecological Applications).</p>",
@@ -2633,6 +2713,66 @@
     }
    ],
    "slug": "ro-crate"
+  },
+  "103": {
+   "title": "FHIR (Fast Healthcare Interoperability Resources)",
+   "description": "<p>FHIR is a set of standards for the exchange of healthcare information and data. It defines metadata schemas for describing various entities relevant to healthcare – such as patients, procedures, and clinical reasoning – as well as protocols for exchanging data and metadata records between systems. The information may be serialized as XML, JSON, ND-JSON, or RDF/Turtle.</p><p>The Infrastructure Package was approved as standard ANSI/HL7 FHIR® R4 INFRASTRUCTURE R1-2019.</p>",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain280"
+   ],
+   "locations": [
+    {
+     "url": "https://www.hl7.org/fhir/",
+     "type": "website"
+    },
+    {
+     "url": "https://www.hl7.org/fhir/fhir-single.xsd",
+     "type": "XSD"
+    }
+   ],
+   "slug": "fhir-fast-healthcare-interoperability-resources",
+   "versions": [
+    {
+     "number": "0.0.82",
+     "issued": "2014-09-30",
+     "locations": [
+      {
+       "url": "http://hl7.org/fhir/DSTU1/",
+       "type": "website"
+      }
+     ]
+    },
+    {
+     "number": "1.0.2",
+     "issued": "2015-10-24",
+     "locations": [
+      {
+       "url": "http://hl7.org/fhir/DSTU2",
+       "type": "website"
+      }
+     ]
+    },
+    {
+     "number": "3.0.2",
+     "issued": "2019-10-24",
+     "locations": [
+      {
+       "url": "http://hl7.org/fhir/R4",
+       "type": "website"
+      }
+     ]
+    },
+    {
+     "number": "4.0.1",
+     "issued": "2019-10-30",
+     "locations": [
+      {
+       "url": "http://hl7.org/fhir/R4",
+       "type": "website"
+      }
+     ]
+    }
+   ]
   }
  },
  "g": {
@@ -4021,6 +4161,24 @@
     }
    ],
    "slug": "research-object"
+  },
+  "124": {
+   "name": "HL7 (Health Level Seven International)",
+   "description": "Founded in 1987, Health Level Seven International (HL7) is a not-for-profit, ANSI-accredited standards developing organization dedicated to providing a comprehensive framework and related standards for the exchange, integration, sharing and retrieval of electronic health information that supports clinical practice and the management, delivery and evaluation of health services.",
+   "types": [
+    "standards body"
+   ],
+   "locations": [
+    {
+     "url": "http://www.hl7.org/",
+     "type": "website"
+    },
+    {
+     "url": "mailto:hq@HL7.org",
+     "type": "email"
+    }
+   ],
+   "slug": "hl7-health-level-seven-international"
   }
  },
  "t": {
@@ -6895,6 +7053,12 @@
   },
   "192": {
    "@id": "msc:m95"
+  },
+  "193": {
+   "maintainers": [
+    "msc:g124"
+   ],
+   "@id": "msc:m103"
   }
  }
 }
