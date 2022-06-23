@@ -2773,6 +2773,203 @@
      ]
     }
    ]
+  },
+  "104": {
+   "title": "RDA (Resource Description Access)",
+   "description": "RDA: Resource Description and Access is a package of data elements, guidelines, and instructions for creating library and cultural heritage resource metadata that are well-formed according to international models for user-focused linked data applications.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept515"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.rdatoolkit.org/",
+     "type": "website"
+    }
+   ],
+   "slug": "rda-resource-description-access"
+  },
+  "105": {
+   "title": "Plasma-MDS (Plasma Metadata Schema)",
+   "description": "Plasma-MDS is used to provide structured disciplinary metadata to data sets in the field of plasma science and technology. Its main aim is to facilitate the discovery and exchange of research data in this field.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept10932",
+    "http://vocabularies.unesco.org/thesaurus/concept132",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain220"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://purl.org/plasma-mds",
+     "type": "JSON"
+    },
+    {
+     "url": "https://doi.org/10.1038/s41597-020-00771-0",
+     "type": "document"
+    },
+    {
+     "url": "https://www.plasma-mds.org",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.5281/zenodo.4771086",
+     "scheme": "DOI"
+    }
+   ],
+   "slug": "plasma-mds-plasma-metadata-schema"
+  },
+  "106": {
+   "title": "ODM (Operational Data Model)",
+   "description": "ODM-XML is a data exchange standard, vendor-neutral, platform-independent suited for exchanging and archiving clinical and translational research data, along with their associated metadata, administrative data, reference data, and audit information. ODM-XML facilitates the regulatory-compliant acquisition, archival and exchange of metadata and data. ",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept5453",
+    "http://vocabularies.unesco.org/thesaurus/concept238"
+   ],
+   "slug": "odm-operational-data-model",
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.cdisc.org/standards/data-exchange/odm",
+     "type": "website"
+    }
+   ]
+  },
+  "107": {
+   "title": "openPMD (Open Standard for Particle-Mesh Data)",
+   "description": "<p>OpenPMD provides naming and attribute conventions that allow the exchange of particle and mesh based data from scientific simulations and experiments. The primary goal is to define a minimal set/kernel of meta information that enables the sharing and exchange of data to achieve</p><ul><li>portability between various applications and differing algorithms;</li><li>a unified open-access description for scientific data (publishing and archiving);</li><li>a unified description for post-processing, visualization and analysis.</li></ul><p>OpenPMD suits any kind of hierarchical, self-describing data format, such as, but not limited to ADIOS1 (BP3), ADIOS2 (BP4), HDF5, JSON, and XML.</p>",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept144",
+    "http://vocabularies.unesco.org/thesaurus/concept123",
+    "http://vocabularies.unesco.org/thesaurus/concept127",
+    "http://vocabularies.unesco.org/thesaurus/concept128",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain230"
+   ],
+   "slug": "openpmd-open-standard-for-particle-mesh-data",
+   "locations": [
+    {
+     "url": "https://www.openpmd.org/",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/openPMD/openPMD-standard/blob/latest/STANDARD.md",
+     "type": "document"
+    }
+   ],
+   "versions": [
+    {
+     "number": "1.0.0",
+     "issued": "2015-11-11",
+     "identifiers": [
+      {
+       "id": "10.5281/zenodo.33624",
+       "scheme": "DOI"
+      }
+     ]
+    },
+    {
+     "number": "1.0.1",
+     "issued": "2017-12-01",
+     "identifiers": [
+      {
+       "id": "10.5281/zenodo.1069534",
+       "scheme": "DOI"
+      }
+     ]
+    },
+    {
+     "number": "1.1.0",
+     "issued": "2018-02-06",
+     "identifiers": [
+      {
+       "id": "10.5281/zenodo.1167843",
+       "scheme": "DOI"
+      }
+     ]
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.5281/zenodo.591699",
+     "scheme": "DOI"
+    }
+   ]
+  },
+  "108": {
+   "title": "Minimum Information about any (x) Sequence (MIxS)",
+   "description": "MIxS currently consists of three separate checklists; MIGS for genomes, MIMS for metagenomes, and MIMARKS for marker genes.\r\n\r\nTo create a single entry point to all minimum information checklists from the GSC and to the environmental packages, we created an overarching framework, the MIxS standard (publication in Nature Biotechnology). MIxS includes the technology-specific checklists from the previous MIGS and MIMS standards, provides a way of introducing additional checklists such as MIMARKS, and also allows annotation of sample data using environmental packages.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept16998",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain270",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain255"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://genomicsstandardsconsortium.github.io/mixs/",
+     "type": "website"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "MIXS.vocab",
+     "uri": "https://w3id.org/mixs/vocab/"
+    }
+   ],
+   "slug": "minimum-information-about-any-x-sequence-mixs"
+  },
+  "109": {
+   "title": "LIDO (Lightweight Information Describing Objects)",
+   "description": "LIDO is an XML schema intended for delivering metadata, for use in a variety of online services, from an organization’s online collections database to portals of aggregated resources, as well as exposing, sharing, and connecting data on the web. Its strength lies in its ability to support the typical range of descriptive information about objects of material culture. It can be used for all kinds of objects, e.g., art, architecture, cultural history, history of technology, and natural history. LIDO supports multilingual application environments. Being an application of the CIDOC Conceptual Reference Model (CRM), LIDO is the result of a collaborative effort of international stakeholders in the museum sector, starting in 2008, to create a common solution for contributing cultural heritage content to portals and other repositories of aggregated resources. LIDO is maintained under the patronage of CIDOC - ICOM International Committee for Documentation.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept3103",
+    "http://vocabularies.unesco.org/thesaurus/concept2708",
+    "http://vocabularies.unesco.org/thesaurus/concept2528",
+    "http://vocabularies.unesco.org/thesaurus/concept3091",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain660",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain360",
+    "http://vocabularies.unesco.org/thesaurus/concept492",
+    "http://vocabularies.unesco.org/thesaurus/concept496",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain350",
+    "http://vocabularies.unesco.org/thesaurus/concept232"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://cidoc.mini.icom.museum/working-groups/lido/lido-overview/",
+     "type": "website"
+    },
+    {
+     "url": "http://lido-schema.org/schema/v1.1/lido-v1.1.xsd",
+     "type": "XSD"
+    },
+    {
+     "url": "http://www.lido-schema.org/schema/v1.0/lido-v1.0.xsd",
+     "type": "XSD"
+    },
+    {
+     "url": "http://lido-schema.org/schema/v1.1/lido-v1.1.html",
+     "type": "document"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "lido",
+     "uri": "http://www.lido-schema.org/"
+    }
+   ],
+   "slug": "lido-lightweight-information-describing-objects"
   }
  },
  "g": {
@@ -4179,6 +4376,97 @@
     }
    ],
    "slug": "hl7-health-level-seven-international"
+  },
+  "125": {
+   "name": "Helmholtz Centre for Environmental Research ",
+   "description": "The research institution conducts research to support a sustainable use of our natural resources to benefit both mankind and the environment.",
+   "locations": [
+    {
+     "url": "https://www.ufz.de",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "000h6jb29",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "helmholtz-centre-for-environmental-research"
+  },
+  "126": {
+   "name": "Centre for Environmental Data Analysis (CEDA)",
+   "types": [
+    "archive"
+   ],
+   "locations": [
+    {
+     "url": "https://www.ceda.ac.uk/",
+     "type": "website"
+    }
+   ],
+   "slug": "centre-for-environmental-data-analysis-ceda"
+  },
+  "127": {
+   "name": "Helmholtz Zentrum München",
+   "description": "Helmholtz Zentrum München is the German Research Center for Environmental Health. It investigates important common diseases which develop from the interaction of lifestyle, environmental factors and personal genetic background, focusing particularly on diabetes mellitus, allergies and chronic lung diseases.\r\n\r\nHelmholtz Zentrum München is a research institution of the Federal Republic of Germany and the Free State of Bavaria. It is a member of the Helmholtz Association of German Research Centers.",
+   "locations": [
+    {
+     "url": "https://www.helmholtz-munich.de/helmholtz-zentrum-muenchen/index.html",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "00cfam450",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "helmholtz-zentrum-munchen"
+  },
+  "128": {
+   "name": "Clinical Data Interchange Standards Consortium (CDISC)",
+   "types": [
+    "standards body"
+   ],
+   "locations": [
+    {
+     "url": "https://www.cdisc.org/",
+     "type": "website"
+    }
+   ],
+   "slug": "clinical-data-interchange-standards-consortium-cdisc"
+  },
+  "129": {
+   "name": "German Aerospace Center (DLR)",
+   "description": "The German Aerospace Center (German: Deutsches Zentrum für Luft- und Raumfahrt e.V., abbreviated DLR), is the national center for aerospace, energy and transportation research of Germany. It is engaged in a wide range of research and development projects in national and international partnerships. In addition to conducting its own research projects, DLR also acts as the German space agency. As such, it is responsible for planning and implementing the German space programme on behalf of the German federal government. As a project management agency, DLR also coordinates and answers the technical and organizational implementation of projects funded by a number of German federal ministries.",
+   "locations": [
+    {
+     "url": "https://www.dlr.de/EN/Home/home_node.html",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "04bwf3e34",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "german-aerospace-center-dlr"
+  },
+  "130": {
+   "name": "CIDOC - ICOM International Committee for Documentation",
+   "description": "CIDOC is a committee of the International Council of Museums (ICOM). It provides the museum community with advice on good practice and developments in museum documentation.",
+   "types": [
+    "professional group"
+   ],
+   "locations": [
+    {
+     "url": "https://cidoc.mini.icom.museum/",
+     "type": "website"
+    }
+   ],
+   "slug": "cidoc-icom-international-committee-for-documentation"
   }
  },
  "t": {
@@ -5008,6 +5296,83 @@
      "issued": "2020-09-02"
     }
    ]
+  },
+  "69": {
+   "title": "CEDAR Workbench",
+   "description": "Provides simple authoring of semantically rigorous metadata templates (forms) and instances (filled-out metadata) following a universal JSON Schema, and access to the produced metadata artifacts via a well-described REST API. Features include autocomplete, real-time validation, recommendations based on previous metadata for that template, sharing with individuals or groups, OpenView of resources on the web without an account, and publication (freezing) of template versions. Modular template construction and over 60,000 Common Data Element (CDE) fields from caDSR allow effective reuse of existing work.",
+   "types": [
+    "web service"
+   ],
+   "locations": [
+    {
+     "url": "https://cedar.metadatacenter.org",
+     "type": "application"
+    },
+    {
+     "url": "https://metadatacenter.org",
+     "type": "website"
+    },
+    {
+     "url": "https://metadatacenter.org/references",
+     "type": "document"
+    },
+    {
+     "url": "https://github.com/metadatacenter",
+     "type": "source"
+    },
+    {
+     "url": "https://resource.metadatacenter.org/api",
+     "type": "service"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Dr. Mark Musen",
+     "givenName": "Musen",
+     "familyName": "Mark"
+    },
+    {
+     "givenName": "John",
+     "familyName": "Graybeal"
+    },
+    {
+     "givenName": "Martin",
+     "familyName": "O'Connor"
+    },
+    {
+     "givenName": "Marcos",
+     "familyName": "Martinez Romero"
+    }
+   ],
+   "slug": "cedar-workbench"
+  },
+  "70": {
+   "title": "cf-checker",
+   "description": "The CF Checker is a utility that checks the contents of a NetCDF file complies with the Climate and Forecasts (CF) Metadata Convention",
+   "types": [
+    "terminal (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/cedadev/cf-checker",
+     "type": "source"
+    }
+   ],
+   "slug": "cf-checker"
+  },
+  "71": {
+   "title": "IOOS Compliance Checker",
+   "description": "The IOOS Compliance Checker is a python based tool for data providers to check for completeness and community standard compliance of local or remote netCDF files against CF and ACDD file standards. ",
+   "types": [
+    "terminal (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://ioos.github.io/",
+     "type": "website"
+    }
+   ],
+   "slug": "ioos-compliance-checker"
   }
  },
  "c": {
@@ -5082,26 +5447,38 @@
    ]
   },
   "5": {
-   "description": "<p>An appendix to the documentation of the DataCite Metadata Schema v2.x matches elements in the DataCite schema to corresponding Dublin Core elements and Dublin Core terms. Later versions of the documentation do not contain this mapping, but do include a suggested mapping of the DataCite controlled vocabulary terms for general resource types to the DCMI Type Vocabulary.</p>",
+   "description": "<p>This document maps the elements of version 4.4 of the DataCite Metadata Schema to the equivalent elements in the DCMI (Dublin Core Metadata Initiative) Metadata Terms namespace. The specification document for the DataCite Metadata Schema includes a suggested mapping of the DataCite controlled vocabulary terms for general resource types to the DCMI Type Vocabulary.</p>",
    "identifiers": [
     {
-     "id": "10.5438/0005",
+     "id": "10.14454/qn00-qx85",
      "scheme": "DOI"
     }
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://schema.datacite.org/meta/kernel-2.2/doc/DataCite-MetadataKernel_v2.2.pdf"
+     "url": "https://schema.datacite.org/meta/kernel-4.4/doc/DataCite_DublinCore_Mapping.pdf",
+     "type": "document"
     }
    ],
    "slug": "datacite-metadata-schema_TO_dublin-core",
    "versions": [
     {
+     "number": "2.2",
+     "note": "A mapping to Dublin Core is included as an appendix to the specification document for the DataCite Metadata Schema v2.2.",
      "issued": "2011-07-01",
-     "number": "2.2"
+     "identifiers": [
+      {
+       "id": "10.5438/0005",
+       "scheme": "DOI"
+      }
+     ]
+    },
+    {
+     "number": "4.4",
+     "issued": "2021-07-08"
     }
-   ]
+   ],
+   "name": "DataCite to Dublin Core Mapping 4.4"
   },
   "6": {
    "description": "<p>An appendix to the documentation of the DataCite Metadata Schema v2.x matches elements in the DataCite schema to corresponding elements in the IDF (International DOI Foundation) Metadata Kernel. It is mainly provided for DataCite’s own administrative purposes.</p>",
@@ -5641,7 +6018,8 @@
     "msc:g74",
     "msc:g80",
     "msc:g83",
-    "msc:g92"
+    "msc:g92",
+    "msc:g125"
    ]
   },
   "6": {
@@ -5693,7 +6071,8 @@
     "msc:g18",
     "msc:g37",
     "msc:g64",
-    "msc:g112"
+    "msc:g112",
+    "msc:g125"
    ]
   },
   "12": {
@@ -5743,7 +6122,8 @@
     "msc:g73",
     "msc:g90",
     "msc:g112",
-    "msc:g121"
+    "msc:g121",
+    "msc:g125"
    ]
   },
   "16": {
@@ -5805,7 +6185,10 @@
     "msc:g37",
     "msc:g48",
     "msc:g49",
-    "msc:g56"
+    "msc:g56",
+    "msc:g125",
+    "msc:g127",
+    "msc:g129"
    ]
   },
   "22": {
@@ -6032,6 +6415,9 @@
    "@id": "msc:m54",
    "parent schemes": [
     "msc:m9"
+   ],
+   "users": [
+    "msc:g125"
    ]
   },
   "53": {
@@ -6104,6 +6490,10 @@
    "@id": "msc:m66",
    "parent schemes": [
     "msc:m22"
+   ],
+   "users": [
+    "msc:g127",
+    "msc:g129"
    ]
   },
   "65": {
@@ -6122,6 +6512,9 @@
    "@id": "msc:m69",
    "parent schemes": [
     "msc:m22"
+   ],
+   "users": [
+    "msc:g125"
    ]
   },
   "68": {
@@ -6978,17 +7371,7 @@
    ]
   },
   "184": {
-   "@id": "msc:c30",
-   "input schemes": [
-    "msc:m22",
-    "msc:m46"
-   ],
-   "output schemes": [
-    "msc:m98"
-   ],
-   "maintainers": [
-    "msc:g118"
-   ]
+   "@id": "msc:c30"
   },
   "185": {
    "@id": "msc:c31",
@@ -7052,13 +7435,64 @@
    ]
   },
   "192": {
-   "@id": "msc:m95"
+   "@id": "msc:m95",
+   "users": [
+    "msc:g125"
+   ]
   },
   "193": {
    "maintainers": [
     "msc:g124"
    ],
    "@id": "msc:m103"
+  },
+  "194": {
+   "supported schemes": [
+    "msc:m94"
+   ],
+   "funders": [
+    "msc:g105"
+   ],
+   "@id": "msc:t69"
+  },
+  "195": {
+   "users": [
+    "msc:g125"
+   ],
+   "@id": "msc:m89"
+  },
+  "196": {
+   "supported schemes": [
+    "msc:m5"
+   ],
+   "maintainers": [
+    "msc:g126"
+   ],
+   "funders": [
+    "msc:g126"
+   ],
+   "@id": "msc:t70"
+  },
+  "197": {
+   "supported schemes": [
+    "msc:m5"
+   ],
+   "@id": "msc:t71"
+  },
+  "198": {
+   "maintainers": [
+    "msc:g128"
+   ],
+   "@id": "msc:m106"
+  },
+  "199": {
+   "@id": "msc:m19"
+  },
+  "200": {
+   "@id": "msc:m109",
+   "maintainers": [
+    "msc:g130"
+   ]
   }
  }
 }
