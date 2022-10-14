@@ -2,7 +2,7 @@
  "_default": {},
  "m": {
   "1": {
-   "description": "<p>The <a href=\"http://www.tdwg.org/standards/115/\">Access to Biological Collections Data (ABCD) Schema</a> is an evolving comprehensive standard for the access to and exchange of data about specimens and observations (a.k.a. primary biodiversity data). The ABCD Schema attempts to be comprehensive and highly structured, supporting data from a wide variety of databases. It is compatible with several existing data standards. Parallel structures exist so that either (or both) atomised data and free-text can be accommodated.</p><p>Sponsored by Biodiversity Information Standards TDWG - the Taxonomic Databases Working Group, the current specification was last modified in 2007.</p>",
+   "description": "<p>The Access to Biological Collections Data (ABCD) Schema is an evolving comprehensive standard for the access to and exchange of data about specimens and observations (a.k.a. primary biodiversity data). The ABCD Schema attempts to be comprehensive and highly structured, supporting data from a wide variety of databases. It is compatible with several existing data standards. Parallel structures exist so that either (or both) atomised data and free-text can be accommodated.</p><p>The ABCD Schema was ratified as a standard by the Biodiversity Information Standards Taxonomic Databases Working Group (TDWG) in 2005. It was developed as a community-driven effort, with contributions from CODATA, BioCASE and GBIF among other organizations.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept4011",
     "http://vocabularies.unesco.org/thesaurus/concept230",
@@ -14,16 +14,153 @@
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://www.tdwg.org/standards/115/"
+     "url": "http://www.tdwg.org/standards/115/",
+     "type": "document"
     },
     {
-     "type": "website",
-     "url": "http://wiki.tdwg.org/ABCD"
+     "url": "https://abcd.tdwg.org/",
+     "type": "website"
+    },
+    {
+     "url": "http://rs.tdwg.org/abcd/doc/xmlschema/",
+     "type": "XSD"
     }
    ],
    "slug": "abcd-access-biological-collection-data",
-   "title": "ABCD (Access to Biological Collection Data)"
+   "title": "ABCD (Access to Biological Collection Data)",
+   "versions": [
+    {
+     "number": "1.01",
+     "issued": "2002-12-09"
+    },
+    {
+     "number": "1.20",
+     "issued": "2003-08-06",
+     "locations": [
+      {
+       "url": "https://www.bgbm.org/TDWG/CODATA/ABCD-FirstReferenceImplementation.htm",
+       "type": "website"
+      },
+      {
+       "url": "https://www.bgbm.org/TDWG/CODATA/Schema/ABCD-1.20.xsd",
+       "type": "XSD"
+      }
+     ]
+    },
+    {
+     "number": "2.06",
+     "issued": "2005-09-16",
+     "locations": [
+      {
+       "url": "https://www.bgbm.org/TDWG/CODATA/Schema/default.htm",
+       "type": "website"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/documentation/ABCD_2.06",
+       "type": "document"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/ABCD_2.06.xsd",
+       "type": "XSD"
+      }
+     ],
+     "samples": [
+      {
+       "title": "Sample ABCD Document",
+       "url": "https://wiki.bgbm.org/bps/index.php/SampleABCDDocument"
+      }
+     ]
+    },
+    {
+     "number": "2.06a",
+     "note": "(Date of publication uncertain)",
+     "issued": "2006-10-09",
+     "locations": [
+      {
+       "url": "https://abcd.tdwg.org/legacy/2.06/a/ABCD_2.06a.xsd",
+       "type": "XSD"
+      }
+     ]
+    },
+    {
+     "number": "2.06b",
+     "note": "(Date of publication uncertain)",
+     "issued": "2006-11-15",
+     "locations": [
+      {
+       "url": "https://abcd.tdwg.org/xml/documentation/ABCD_2.06b",
+       "type": "document"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/ABCD_2.06b.xsd",
+       "type": "XSD"
+      }
+     ]
+    },
+    {
+     "number": "2.06d",
+     "note": "(Date of publication uncertain)",
+     "issued": "2007-06-13",
+     "locations": [
+      {
+       "url": "https://abcd.tdwg.org/xml/documentation/ABCD_2.06d",
+       "type": "document"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/ABCD_2.06d.xsd",
+       "type": "XSD"
+      }
+     ]
+    },
+    {
+     "number": "v2.06e",
+     "note": "(Date of publication uncertain)",
+     "issued": "2007-07-11",
+     "locations": [
+      {
+       "url": "https://abcd.tdwg.org/xml/documentation/ABCD_2.06e",
+       "type": "document"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/ABCD_2.06e.xsd",
+       "type": "XSD"
+      }
+     ]
+    },
+    {
+     "number": "2.06f",
+     "note": "(Date of publication uncertain)",
+     "issued": "2007-10-18",
+     "locations": [
+      {
+       "url": "https://abcd.tdwg.org/xml/documentation/ABCD_2.06f",
+       "type": "document"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/ABCD_2.06f.xsd",
+       "type": "XSD"
+      }
+     ]
+    },
+    {
+     "number": "3.0",
+     "available": "2019-01-31",
+     "locations": [
+      {
+       "url": "https://abcd.tdwg.org/3.0/",
+       "type": "website"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/documentation/ABCD_3.0",
+       "type": "document"
+      },
+      {
+       "url": "https://abcd.tdwg.org/xml/ABCD_3.0.xsd",
+       "type": "XSD"
+      }
+     ]
+    }
+   ]
   },
   "2": {
    "description": "<p>A semantic standard developed by the Food and Agriculture Organization (FAO) of the United Nations, AgMES enables description, resource discovery, interoperability and data exchange of different types of information resources in all areas relevant to food production, nutrition and rural development.</p><p>The standard is maintained by AIMS (Agricultural Information Management Standards), and while it has been used in various application profiles, it is now deprecated for new uses and will no longer be updated.</p>",
@@ -35,50 +172,98 @@
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://aims.fao.org/es/standards/agmes/namespace-specification"
+     "url": "http://aims.fao.org/standards/agmes",
+     "type": "website"
     },
     {
-     "type": "website",
-     "url": "http://aims.fao.org/standards/agmes"
+     "url": "http://aims.fao.org/standards/agmes/namespace-specification",
+     "type": "document"
     }
    ],
    "slug": "agmes-agricultural-metadata-element-set",
    "title": "AgMES (Agricultural Metadata Element Set)",
    "versions": [
     {
-     "issued": "2003-02-01",
-     "locations": [
-      {
-       "type": "RDFS",
-       "url": "http://purl.org/agmes/1.1/"
-      }
-     ],
      "number": "1.1",
+     "issued": "2003-02-01",
      "valid": {
       "start": "2003-02-01",
       "end": "2010-11-11"
-     }
+     },
+     "locations": [
+      {
+       "url": "https://web.archive.org/web/20171011092147/http://ftp.fao.org/gi/gil/gilws/aims/metadata/xml/ags.rdf",
+       "type": "RDFS"
+      }
+     ],
+     "namespaces": [
+      {
+       "prefix": "agmes",
+       "uri": "http://purl.org/agmes/1.1/"
+      }
+     ]
     }
    ]
   },
   "3": {
-   "description": "<p>The <a href=\"http://www.virtualastronomy.org/avm_metadata.php\">AVM</a> scheme supports the cross-searching of collections of print-ready and screen-ready astronomical imagery rendered from telescopic observations (also known as &#8216;pretty pictures&#8217;). The scheme is compatible with the <a href=\"http://www.adobe.com/products/xmp/\">Adobe XMP</a> specification, so the metadata can be embedded within common image formats such as JPEG, TIFF and PNG.</p><p>Such images can combine data acquired at different wavebands and from different observatories. While the primary intent is to cover data-derived astronomical images, there are broader uses as well. Specifically, the most general subset of this schema is also appropriate for describing artwork and illustrations of astronomical subject matter.</p><p>AVM is a proposed recommendation of the International Virtual Observatory Alliance and was last updated in 2011.</p>",
+   "description": "<p>The AVM scheme supports the cross-searching of collections of print-ready and screen-ready astronomical imagery rendered from telescopic observations (also known as &#8216;pretty pictures&#8217;). The scheme is compatible with the <a href=\"http://www.adobe.com/products/xmp/\">Adobe XMP</a> specification, so the metadata can be embedded within common image formats such as JPEG, TIFF and PNG.</p><p>Such images can combine data acquired at different wavebands and from different observatories. While the primary intent is to cover data-derived astronomical images, there are broader uses as well. Specifically, the most general subset of this schema is also appropriate for describing artwork and illustrations of astronomical subject matter.</p><p>AVM is a proposed recommendation of the International Virtual Observatory Alliance and was last updated in 2011.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept152"
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://www.virtualastronomy.org/avm_metadata.php#2"
-    },
-    {
-     "type": "website",
-     "url": "http://www.virtualastronomy.org/avm_metadata.php"
+     "url": "http://www.virtualastronomy.org/avm_metadata.php",
+     "type": "website"
     }
    ],
    "slug": "avm-astronomy-visualization-metadata",
-   "title": "AVM (Astronomy Visualization Metadata)"
+   "title": "AVM (Astronomy Visualization Metadata)",
+   "versions": [
+    {
+     "number": "1.00",
+     "note": "More images tagged with AVM metadata can be found on the standard's website.",
+     "issued": "2006-09-19",
+     "locations": [
+      {
+       "url": "https://www.virtualastronomy.org/files/AOIMetadata_Sept2006.pdf",
+       "type": "document"
+      }
+     ],
+     "samples": [
+      {
+       "title": "NGC 1566 from Spitzer Science Center",
+       "url": "https://www.virtualastronomy.org/images/sig05-013.jpg"
+      }
+     ]
+    },
+    {
+     "number": "1.10",
+     "note": "More images tagged with AVM metadata can be found on the standard's website.",
+     "issued": "2008-05-14",
+     "locations": [
+      {
+       "url": "https://www.virtualastronomy.org/avm_1.1_final_draft.pdf",
+       "type": "document"
+      }
+     ],
+     "samples": [
+      {
+       "title": "SNR 0509 from Chandra X-Ray Observatory",
+       "url": "https://www.virtualastronomy.org/files/avm_examples/chandra/snr0509_xray.tif"
+      }
+     ]
+    },
+    {
+     "number": "1.2",
+     "issued": "2011-06-14",
+     "locations": [
+      {
+       "url": "https://www.virtualastronomy.org/AVM_DRAFTVersion12_rlh02.pdf",
+       "type": "document"
+      }
+     ]
+    }
+   ]
   },
   "4": {
    "description": "<p>The Common European Research Information Format is the standard that the EU recommends to its member states for recording information about research activity. Since version 1.6 it has included specific support for recording metadata for datasets.</p>",
@@ -2970,6 +3155,28 @@
     }
    ],
    "slug": "lido-lightweight-information-describing-objects"
+  },
+  "110": {
+   "title": "ABCD Zoology",
+   "description": "ABCD Zoology is an application profile of ABCD tailored for use in zoological contexts. It was the first official application profile to use the RDF-based version 3.0 of ABCD.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept235"
+   ],
+   "locations": [
+    {
+     "url": "https://abcd.tdwg.org/xml/",
+     "type": "website"
+    },
+    {
+     "url": "https://abcd.tdwg.org/xml/documentation/ABCD_3.0_zoology",
+     "type": "document"
+    },
+    {
+     "url": "https://abcd.tdwg.org/xml/ABCD_3.0_zoology.xsd",
+     "type": "XSD"
+    }
+   ],
+   "slug": "abcd-zoology"
   }
  },
  "g": {
@@ -4467,6 +4674,20 @@
     }
    ],
    "slug": "cidoc-icom-international-committee-for-documentation"
+  },
+  "131": {
+   "name": "AIMS (Agricultural Information Management Standards)",
+   "description": "Part of the Food and Agriculture Organization of the United Nations (FAO), AIMS is a community of experts in agricultural information and data management from around the world. It provides an open and free space for communication and the exchange of ideas, suggestions, questions, and solutions around the core areas of Information and Data Access Services, information and data management open standards, technology, and methodologies.",
+   "types": [
+    "professional group"
+   ],
+   "locations": [
+    {
+     "url": "http://aims.fao.org/",
+     "type": "website"
+    }
+   ],
+   "slug": "aims-agricultural-information-management-standards"
   }
  },
  "t": {
@@ -5994,6 +6215,9 @@
    "@id": "msc:m2",
    "users": [
     "msc:g2"
+   ],
+   "maintainers": [
+    "msc:g131"
    ]
   },
   "3": {
@@ -7493,6 +7717,12 @@
    "maintainers": [
     "msc:g130"
    ]
+  },
+  "201": {
+   "parent schemes": [
+    "msc:m1"
+   ],
+   "@id": "msc:m110"
   }
  }
 }
