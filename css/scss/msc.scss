@@ -379,7 +379,12 @@ header {
 // Special formatting for page actions
 
 aside {
-  margin-top: $spacer * 2.5;
+  margin-top: -$alert-margin-bottom;
+  text-align: center;
+}
+
+aside.alert {
+
 }
 
 // Special formatting for the footer

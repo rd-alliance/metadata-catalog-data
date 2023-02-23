@@ -28,7 +28,7 @@ From this directory:
 
 ```bash
 sass --update scss/msc.scss:css/msc.css
-sass --update scss/msc.scss:css/msc.min.css --style compressed
+sass --update scss/msc.scss:css/msc.min.css --style compressed --embed-sources
 ```
 
 Alternatively, you can use the included `Makefile`:
