@@ -2,14 +2,12 @@
 // =============
 
 // Colours
-$theme-colors: (
-  "primary": #6b2e20,
-  "success": #4e8335,// should be #63a844
-  "info": #00acc1,
-  "warning": #ebdc14,//#ffb300,
-  "danger": #e53935,
-  "dark": #1c1c1d,
-);
+$primary: #6b2e20;
+$success: #4e8335;//#63a844,
+$info:    #00acc1;
+$warning: #ebdc14;//#ffb300,
+$danger:  #e53935;
+$dark:    #1c1c1d;
 
 $field-colors: (
   "keyword": #d0b7ad,
@@ -17,9 +15,13 @@ $field-colors: (
   "location": #bbdefb,
 );
 
+$component-active-bg: $primary;
+
 // Grid
+// - minimum screen width for given corresponding responsive classes
 $grid-breakpoints: (
-  xs: 0,
+  xxs: 0,
+  xs: 240px,
   sm: 480px,
   md: 672px,
   lg: 992px,
@@ -38,7 +40,9 @@ $form-text-margin-top: 1rem;
 
 @import "../bootstrap/scss/functions";
 @import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/maps";
 @import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/utilities";
 
 // Post-overrides
 // ==============
@@ -47,6 +51,7 @@ $form-text-margin-top: 1rem;
 // before this point.
 
 // Grid
+// - maximum container width for screen width categories
 $container-max-widths: (
   sm: 448px,
   md: 640px,
@@ -65,34 +70,28 @@ $navbar-dark-color:         rgba($white, .8);
 $navbar-dark-hover-color:   $white;
 $navbar-nav-link-padding-x: 1rem;
 
-// Reimplement v3 style validation code
-@mixin form-validation-state($state, $color, $icon) {
-  .#{$state}-feedback {
-    width: 100%;
-    margin-top: $form-feedback-margin-top;
-    @include font-size($form-feedback-font-size);
-    color: $color;
-  }
-
-  .#{$state}-tooltip {
-    position: absolute;
-    top: 100%;
-    z-index: 5;
-    max-width: 100%; // Contain to parent when possible
-    padding: $form-feedback-tooltip-padding-y $form-feedback-tooltip-padding-x;
-    margin-top: .1rem;
-    @include font-size($form-feedback-tooltip-font-size);
-    line-height: $form-feedback-tooltip-line-height;
-    color: color-yiq($color);
-    background-color: rgba($color, $form-feedback-tooltip-opacity);
-    @include border-radius($form-feedback-tooltip-border-radius);
-  }
-
-  .is-#{$state} {
+// Extra mixin allowing is-*valid to be set on ancestor instead
+@mixin form-validation-state-inherit(
+  $state,
+  $color,
+  $icon,
+  $tooltip-color: color-contrast($color),
+  $tooltip-bg-color: rgba($color, $form-feedback-tooltip-opacity),
+  $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity)
+) {
+  @include form-validation-state-selector($state) {
+    // Not styled by regular Bootstrap
     label {
       color: $color;
     }
 
+    // Sibling relationship changed to descendant
+    .#{$state}-feedback,
+    .#{$state}-tooltip {
+      display: block;
+    }
+
+    // Descendant state selectors removed
     .form-control {
       border-color: $color;
 
@@ -106,7 +105,7 @@ $navbar-nav-link-padding-x: 1rem;
 
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        box-shadow: $focus-box-shadow;
       }
     }
 
@@ -117,68 +116,55 @@ $navbar-nav-link-padding-x: 1rem;
       }
     }
 
-    .custom-select {
+    .form-select {
       border-color: $color;
 
       @if $enable-validation-icons {
-        padding-right: $custom-select-feedback-icon-padding-right;
-        background: $custom-select-background, escape-svg($icon) $custom-select-bg no-repeat $custom-select-feedback-icon-position / $custom-select-feedback-icon-size;
+        &:not([multiple]):not([size]),
+        &:not([multiple])[size="1"] {
+          padding-right: $form-select-feedback-icon-padding-end;
+          background-image: escape-svg($form-select-indicator), escape-svg($icon);
+          background-position: $form-select-bg-position, $form-select-feedback-icon-position;
+          background-size: $form-select-bg-size, $form-select-feedback-icon-size;
+        }
       }
 
       &:focus {
         border-color: $color;
-        box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+        box-shadow: $focus-box-shadow;
+      }
+    }
+
+    .form-control-color {
+      @if $enable-validation-icons {
+        width: add($form-color-width, $input-height-inner);
       }
     }
 
     .form-check-input {
+      border-color: $color;
+
+      &:checked {
+        background-color: $color;
+      }
+
+      &:focus {
+        box-shadow: $focus-box-shadow;
+      }
+
       ~ .form-check-label {
         color: $color;
       }
-
-      ~ .#{$state}-feedback,
-      ~ .#{$state}-tooltip {
-        display: block;
-      }
     }
 
-    .custom-control-input {
-      ~ .custom-control-label {
-        color: $color;
-
-        &::before {
-          border-color: $color;
-        }
-      }
-
-      &:checked {
-        ~ .custom-control-label::before {
-          border-color: lighten($color, 10%);
-          @include gradient-bg(lighten($color, 10%));
-        }
-      }
-
-      &:focus {
-        ~ .custom-control-label::before {
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
-        }
-
-        &:not(:checked) ~ .custom-control-label::before {
-          border-color: $color;
-        }
-      }
-    }
-
-    // custom file
-    .custom-file-input {
-      ~ .custom-file-label {
-        border-color: $color;
-      }
-
-      &:focus {
-        ~ .custom-file-label {
-          border-color: $color;
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+    .input-group {
+      > .form-control:not(:focus),
+      > .form-select:not(:focus),
+      > .form-floating:not(:focus-within) {
+        @if $state == "valid" {
+          z-index: 3;
+        } @else if $state == "invalid" {
+          z-index: 4;
         }
       }
     }
@@ -187,31 +173,32 @@ $navbar-nav-link-padding-x: 1rem;
 
 // Optional
 // ========
-
 @import "../bootstrap/scss/root";
 @import "../bootstrap/scss/reboot";
 @import "../bootstrap/scss/type";
 //@import "../bootstrap/scss/images";
-@import "../bootstrap/scss/code";
+@import "../bootstrap/scss/containers";
 @import "../bootstrap/scss/grid";
 @import "../bootstrap/scss/tables";
 @import "../bootstrap/scss/forms";
+
+@each $state, $data in $form-validation-states {
+  @include form-validation-state-inherit($state, $data...);
+}
+
 @import "../bootstrap/scss/buttons";
 @import "../bootstrap/scss/transitions";
 //@import "../bootstrap/scss/dropdown";
 //@import "../bootstrap/scss/button-group";
-@import "../bootstrap/scss/input-group";
-@import "../bootstrap/scss/custom-forms";
 @import "../bootstrap/scss/nav";
 @import "../bootstrap/scss/navbar";
 @import "../bootstrap/scss/card";
+//@import "../bootstrap/scss/accordion";
 //@import "../bootstrap/scss/breadcrumb";
 //@import "../bootstrap/scss/pagination";
 //@import "../bootstrap/scss/badge";
-//@import "../bootstrap/scss/jumbotron";
 @import "../bootstrap/scss/alert";
 //@import "../bootstrap/scss/progress";
-//@import "../bootstrap/scss/media";
 //@import "../bootstrap/scss/list-group";
 @import "../bootstrap/scss/close";
 //@import "../bootstrap/scss/toasts";
@@ -220,8 +207,9 @@ $navbar-nav-link-padding-x: 1rem;
 //@import "../bootstrap/scss/popover";
 //@import "../bootstrap/scss/carousel";
 //@import "../bootstrap/scss/spinners";
-@import "../bootstrap/scss/utilities";
-@import "../bootstrap/scss/print";
+//@import "../bootstrap/scss/offcanvas";
+//@import "../bootstrap/scss/placeholders";
+@import "../bootstrap/scss/helpers";
 
 // Local style rules
 // =================
@@ -251,23 +239,95 @@ ul ul,
 ul ol,
 ol ul,
 ol ol {
-  margin-bottom: .75rem;
+  margin-bottom: $paragraph-margin-bottom;
 }
 
 // Change bullet styles for deeply nested lists
-ul ul ul ul > li {
+ul ul ul ul {
   list-style-type: disc;
   list-style-type: "–  ";
 }
 
-ul ul ul ul ul > li {
+ul ul ul ul ul {
   list-style-type: circle;
   list-style-type: "»  ";
 }
 
-ul ul ul ul ul ul > li {
+ul ul ul ul ul ul {
   list-style-type: square;
   list-style-type: "›  ";
+}
+
+// Hybrid nav list and list-group
+.nav-group {
+  --#{$prefix}nav-group-border-color: #{$list-group-border-color};
+  --#{$prefix}nav-group-border-width: #{$list-group-border-width};
+  --#{$prefix}nav-group-border-radius: #{$list-group-border-radius};
+  --#{$prefix}nav-group-hover-bg: #{$list-group-hover-bg};
+  --#{$prefix}nav-group-disabled-color: #{$list-group-disabled-color};
+  --#{$prefix}nav-group-disabled-bg: #{$list-group-disabled-bg};
+  --#{$prefix}nav-group-active-bg: #{$list-group-action-active-bg};
+  --#{$prefix}nav-group-active-border-color: #{$list-group-active-border-color};
+
+  flex-direction: column;
+  @include border-radius(var(--#{$prefix}nav-group-border-radius));
+
+  :not(.nav-item) > & {
+    border-left: var(--#{$prefix}nav-group-border-width) solid var(--#{$prefix}nav-group-border-color);
+    border-right: var(--#{$prefix}nav-group-border-width) solid var(--#{$prefix}nav-group-border-color);
+    border-bottom: var(--#{$prefix}nav-group-border-width) solid var(--#{$prefix}nav-group-border-color);
+
+    & > .nav-item:first-child {
+      @include border-top-radius(inherit);
+    }
+
+    & > .nav-item:first-child > .nav-link {
+      @include border-top-radius(inherit);
+    }
+
+    & + .nav-group {
+      margin-top: $spacer;
+    }
+  }
+}
+
+.nav-group .nav-group {
+  padding-left: var(--bs-nav-link-padding-x);
+}
+
+@include media-breakpoint-up(sm) {
+  .nav-group .nav-group {
+    padding-left: calc(2 * var(--bs-nav-link-padding-x));
+  }
+}
+
+.nav-group .nav-link {
+  // Hover state
+  &:hover,
+  &:focus {
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    text-decoration: none;
+    background-color: var(--#{$prefix}nav-group-hover-bg);
+  }
+
+  &:active {
+    background-color: var(--#{$prefix}nav-group-active-bg);
+  }
+
+  border-top: var(--#{$prefix}nav-group-border-width) solid var(--#{$prefix}nav-group-border-color);
+
+  &.disabled,
+  &:disabled {
+    color: var(--#{$prefix}nav-group-disabled-color);
+    pointer-events: none;
+    background-color: var(--#{$prefix}nav-group-disabled-bg);
+  }
+
+  &.active {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    background-color: var(--#{$prefix}nav-group-active-bg);
+    border-color: var(--#{$prefix}nav-group-active-border-color);
+  }
 }
 
 // Compensate for additional margin-bottom on <dd>s
@@ -276,25 +336,17 @@ dl {
 }
 
 // Adjustments to handle flexbox <dl>s
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+dl div.d-flex {
+  dt {
+    margin-right: 0.5rem;
 
-    @each $value in $displays {
-      dl div.d#{$infix}-#{$value} {
-        dt {
-          margin-right: 0.5rem;
-
-          &:after {
-            content: ":";
-          }
-        }
-
-        dd {
-          flex-shrink: 1;
-        }
-      }
+    &:after {
+      content: ":";
     }
+  }
+
+  dd {
+    flex-shrink: 1;
   }
 }
 
@@ -308,9 +360,17 @@ div.types {
 @each $color, $value in $field-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
-    margin-top: map-get($spacers, 1);
-    margin-bottom: map-get($spacers, 1);
   }
+}
+
+.list-inline {
+  margin-top: $spacer * -0.375;
+  margin-bottom: $spacer * .625;
+}
+
+.list-inline-item .btn {
+  margin-top: $spacer * .375;
+  margin-bottom: $spacer * .375;
 }
 
 div {
@@ -331,12 +391,16 @@ div {
 .card .card-header .card-title {
   @include font-size($h5-font-size);
   margin-bottom: 0;
+
+  & a:not(:hover) {
+    text-decoration: none !important;
+  }
 }
 
 // Shading for dl rows
 dl.dl-striped {
   div:nth-of-type(#{$table-striped-order}) {
-    background-color: $table-accent-bg;
+    background-color: $table-striped-bg;
   }
 
   div {
@@ -348,10 +412,10 @@ dl.dl-striped {
 
 label {
   font-weight: bold;
+}
 
-  &.custom-control-label {
-    font-weight: inherit;
-  }
+.form-group label.col-form-label {
+  font-weight: inherit;
 }
 
 ol.form-list li + li {
@@ -362,11 +426,16 @@ ol.form-list li + li {
   margin-top: .5rem;
 }
 
-.form-subgroup {
-  margin-bottom: $form-group-margin-bottom / 2;
+.form-group {
+  margin-bottom: $paragraph-margin-bottom;
 }
 
-fieldset {
+.form-subgroup {
+  margin-bottom: $form-label-margin-bottom;
+}
+
+fieldset,
+.fieldset {
   margin-bottom: $spacer * 1.5;
 }
 
@@ -376,15 +445,15 @@ header {
   margin-bottom: $spacer;
 }
 
-// Special formatting for page actions
+// Special formatting for page announcements and actions
 
 aside {
-  margin-top: -$alert-margin-bottom;
-  text-align: center;
+  margin-top: $spacer * 2.25;
 }
 
 aside.alert {
-
+  margin-top: -$alert-margin-bottom;
+  text-align: center;
 }
 
 // Special formatting for the footer
@@ -413,3 +482,5 @@ footer .navbar-nav > li > a {
     background-image: linear-gradient(#bdbdbd, #f5f5f5 17%, #f5f5f5 67%, #fff);
   }
 }
+
+@import "../bootstrap/scss/utilities/api";
