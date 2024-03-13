@@ -3418,6 +3418,146 @@
     }
    ],
    "slug": "cessda-data-catalogue-ddi-profiles"
+  },
+  "122": {
+   "title": "CMDI (Component Metadata Infrastructure)",
+   "description": "The Component Metadata Infrastructure provides a framework to create and use self-defined metadata formats. It relies on a modular model of so-called metadata components, which can be assembled together, to improve reuse, interoperability and cooperation among metadata modelers. The model is standardised in ISO 24622-1 and ISO 24622-2. The serialization is typically in XML. Metadata in this format are often distributed via OAI-PMH. The definition of data categories is provided externally, for example by linking to schema.org or the Clarin Concept Registry. ",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept3052",
+    "http://vocabularies.unesco.org/thesaurus/concept11044",
+    "http://vocabularies.unesco.org/thesaurus/concept308",
+    "http://vocabularies.unesco.org/thesaurus/concept8129",
+    "http://vocabularies.unesco.org/thesaurus/concept7442",
+    "http://vocabularies.unesco.org/thesaurus/concept17107",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain330",
+    "http://rdamsc.bath.ac.uk/thesaurus/domain3",
+    "http://vocabularies.unesco.org/thesaurus/concept8030",
+    "http://vocabularies.unesco.org/thesaurus/concept17010",
+    "http://vocabularies.unesco.org/thesaurus/concept11870"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.clarin.eu/content/component-metadata",
+     "type": "website"
+    },
+    {
+     "url": "https://www.iso.org/standard/37336.html",
+     "type": "document"
+    },
+    {
+     "url": "https://www.iso.org/standard/64579.html",
+     "type": "document"
+    },
+    {
+     "url": "https://catalog.clarin.eu/ds/ComponentRegistry",
+     "type": "website"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "cmd",
+     "uri": "https://infra.clarin.eu/CMDI/1.x/xsd/"
+    }
+   ],
+   "slug": "cmdi-component-metadata-infrastructure"
+  },
+  "123": {
+   "title": "MEDIN discovery metadata standard",
+   "description": "The MEDIN Discovery Metadata Standard is a marine profile of the UK government Standard GEMINI2 and also complies with other international conventions such as INSPIRE and ISO19115.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept2634",
+    "http://vocabularies.unesco.org/thesaurus/concept10925",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain240"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://medin.org.uk/data-standards/medin-discovery-metadata-standard",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/medin-marine/Discovery-Standard-public-content/tree/main/Guidance_notes",
+     "type": "document"
+    }
+   ],
+   "slug": "medin-discovery-metadata-standard"
+  },
+  "124": {
+   "title": "DCAT-AP",
+   "description": "DCAT-AP is an application profile of DCAT (Data Catalog Vocabulary W3C Recommendation) to be used in European data portals. It is a universal metadata scheme based on RDF, ready to be further profiled for specific domain needs.",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/domain0"
+   ],
+   "dataTypes": [
+    "msc:datatype1",
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://op.europa.eu/en/web/eu-vocabularies/dcat-ap",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/SEMICeu/DCAT-AP",
+     "type": "website"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "dcatap",
+     "uri": "http://data.europa.eu/r5r/"
+    }
+   ],
+   "slug": "dcat-ap"
+  },
+  "125": {
+   "title": "CSV on the Web (CSVW)",
+   "description": "CSV on the Web is a W3C Recommendation for describing CSV files on the Web, ensuring their proper description, including mapping to JSON and RDF formats.",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/domain0"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.w3.org/TR/tabular-data-primer/",
+     "type": "document"
+    }
+   ],
+   "slug": "csv-on-the-web-csvw"
+  },
+  "126": {
+   "title": "AMB (General metadata profile for educational resources)",
+   "description": "An educational metadata profile for the description of teaching and learning resources, which is mainly based on schema.org or Learning Resource Metadata Initiative [LRMI] and also uses parts of Simple Knowledge Organization System [SKOS]. A JSON-LD-compliant data structure is defined in the form of a HTML specification, including a JSON schema against which data can be automatically checked for conformity with the profile.",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/domain1"
+   ],
+   "dataTypes": [
+    "msc:datatype4"
+   ],
+   "locations": [
+    {
+     "url": "https://w3id.org/kim/amb/latest/",
+     "type": "document"
+    },
+    {
+     "url": "https://w3id.org/kim/amb/latest/schemas/schema.json",
+     "type": "JSON"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "amb",
+     "uri": "https://w3id.org/kim/amb/"
+    }
+   ],
+   "slug": "amb-general-metadata-profile-for-educational-resources"
   }
  },
  "g": {
@@ -5094,6 +5234,52 @@
     }
    ],
    "slug": "cessda-eric"
+  },
+  "144": {
+   "name": "Marine Environmental Data and Information Network (MEDIN)",
+   "description": "MEDIN is a partnership of UK organisations committed to improving access to UK marine data. Sponsored by a consortium of 15 sponsors and partnered with over 50 organisations, MEDIN is open to all with an interest in marine data and information. ",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://medin.org.uk/",
+     "type": "website"
+    },
+    {
+     "url": "mailto:enquiries@medin.org.uk",
+     "type": "email"
+    }
+   ],
+   "slug": "marine-environmental-data-and-information-network-medin"
+  },
+  "145": {
+   "name": "European Commission",
+   "description": "European Commission publishes metadata standards through their SEMIC (Interoperable Europe) initiative",
+   "types": [
+    "standards body",
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://commission.europa.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "european-commission"
+  },
+  "146": {
+   "name": "Competence Center Interoperable Metadata (KIM)",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://wiki.dnb.de/display/DINIAGKIM",
+     "type": "website"
+    }
+   ],
+   "slug": "competence-center-interoperable-metadata-kim"
   }
  },
  "t": {
@@ -6117,6 +6303,86 @@
     }
    ],
    "slug": "fastcat"
+  },
+  "77": {
+   "title": "LinkedPipes DCAT-AP Viewer",
+   "description": "Viewer of DCAT-AP metadata",
+   "types": [
+    "web application"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/linkedpipes/dcat-ap-viewer",
+     "type": "source"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Jakub Klímek",
+     "givenName": "Jakub",
+     "familyName": "Klímek"
+    },
+    {
+     "fullName": "Petr Škoda",
+     "givenName": "Petr",
+     "familyName": "Škoda"
+    }
+   ],
+   "slug": "linkedpipes-dcat-ap-viewer"
+  },
+  "78": {
+   "title": "Protégé (open-source ontology editor)",
+   "description": "A free, open-source ontology editor and framework for building intelligent systems\r\n\r\nProtégé is supported by a strong community of academic, government, and corporate users, who use Protégé to build knowledge-based solutions in areas as diverse as biomedicine, e-commerce, and organizational modeling.",
+   "types": [
+    "web application",
+    "graphical (Windows)",
+    "graphical (Mac OS X)",
+    "graphical (Linux)",
+    "graphical (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://protege.stanford.edu/",
+     "type": "website"
+    }
+   ],
+   "slug": "protege-open-source-ontology-editor"
+  },
+  "79": {
+   "title": "SkoHub Vocabs",
+   "description": "SkoHub Vocabs is a static site generator for Simple Knowledge Organization Systems",
+   "types": [
+    "web service"
+   ],
+   "locations": [
+    {
+     "url": "https://skohub.io/",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/skohub-io/skohub-vocabs",
+     "type": "source"
+    }
+   ],
+   "slug": "skohub-vocabs"
+  },
+  "80": {
+   "title": "Cocoda (Knowledge organization systems management)",
+   "description": "Cocoda is a web application to manage and create mappings between knowledge organization systems, such as classifications, authority files, and thesauri. The Cocoda manual gives a short introduction.\r\n\r\n It provides a technical infrastructure to manage KOS and KOS mappings in order to facilitate a seamless access and use.",
+   "types": [
+    "web application"
+   ],
+   "locations": [
+    {
+     "url": "https://coli-conc.gbv.de/cocoda/",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/gbv/cocoda",
+     "type": "source"
+    }
+   ],
+   "slug": "cocoda-knowledge-organization-systems-management"
   }
  },
  "c": {
@@ -6862,6 +7128,48 @@
     }
    ],
    "slug": "marc-machine-readable-cataloging-to-cidoc-crm"
+  },
+  "38": {
+   "name": "CiteDCAT-AP (DataCite profile of DCAT-AP)",
+   "description": "Definition of DataCite in RDF as DCAT-AP profile",
+   "locations": [
+    {
+     "url": "https://ec-jrc.github.io/datacite-to-dcat-ap/",
+     "type": "document"
+    },
+    {
+     "url": "https://github.com/ec-jrc/datacite-to-dcat-ap",
+     "type": "document"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Andrea Perego",
+     "givenName": "Andrea",
+     "familyName": "Perego"
+    },
+    {
+     "fullName": "Timothy Austin",
+     "givenName": "Timothy",
+     "familyName": "Austin"
+    },
+    {
+     "fullName": "Anders Friis-Christensen",
+     "givenName": "Anders",
+     "familyName": "Friis-Christensen"
+    },
+    {
+     "fullName": "Lorenzino Vaccari",
+     "givenName": "Lorenzino",
+     "familyName": "Vaccari"
+    },
+    {
+     "fullName": "Chrisa Tsinaraki",
+     "givenName": "Chrisa",
+     "familyName": "Tsinaraki"
+    }
+   ],
+   "slug": "citedcat-ap-datacite-profile-of-dcat-ap"
   }
  },
  "e": {},
@@ -8601,6 +8909,67 @@
     "msc:g20"
    ],
    "@id": "msc:m121"
+  },
+  "220": {
+   "parent schemes": [
+    "msc:m66",
+    "msc:m22",
+    "msc:m80"
+   ],
+   "maintainers": [
+    "msc:g144"
+   ],
+   "@id": "msc:m123"
+  },
+  "221": {
+   "parent schemes": [
+    "msc:m12"
+   ],
+   "@id": "msc:m124",
+   "maintainers": [
+    "msc:g145"
+   ],
+   "users": [
+    "msc:g145"
+   ]
+  },
+  "222": {
+   "supported schemes": [
+    "msc:m124"
+   ],
+   "@id": "msc:t77"
+  },
+  "223": {
+   "input schemes": [
+    "msc:m11",
+    "msc:m124"
+   ],
+   "output schemes": [
+    "msc:m11",
+    "msc:m124"
+   ],
+   "maintainers": [
+    "msc:g145"
+   ],
+   "@id": "msc:c38"
+  },
+  "224": {
+   "maintainers": [
+    "msc:g106"
+   ],
+   "@id": "msc:m125"
+  },
+  "225": {
+   "parent schemes": [
+    "msc:m101"
+   ],
+   "@id": "msc:m126",
+   "maintainers": [
+    "msc:g146"
+   ],
+   "users": [
+    "msc:g146"
+   ]
   }
  }
 }
