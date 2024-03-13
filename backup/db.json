@@ -1665,7 +1665,7 @@
    "title": "CARARE metadata schema"
   },
   "50": {
-   "description": "<p>A common base profile of DDI for use by the member archives of CESSDA.</p>",
+   "description": "<p>The CESSDA Metadata Model contains metadata elements, their definitions and information on other requirements, such as repeatability. The Model is built from the viewpoint of quantitative (social science) data and is based on DDI Lifecycle 3.2 metadata standard.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept425",
     "http://rdamsc.bath.ac.uk/thesaurus/subdomain625",
@@ -1674,12 +1674,25 @@
    ],
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.cessda.org/sharing/managing/3/"
+     "url": "https://doi.org/10.5281/zenodo.4672413",
+     "type": "document"
+    },
+    {
+     "url": "https://www.cessda.eu/Metadata-Office",
+     "type": "website"
     }
    ],
    "slug": "cessda-mli-council-european-social-science-data-archives-minimum-level-inf",
-   "title": "CESSDA MLI - Council of European Social Science Data Archives Minimum Level of Information"
+   "title": "CESSDA CMM - Council of European Social Science Data Archives Metadata Model",
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "identifiers": [
+    {
+     "id": "10.5281/zenodo.4672413",
+     "scheme": "DOI"
+    }
+   ]
   },
   "51": {
    "description": "<p>Developed by the Cooperative Ocean-Atmosphere Research Data Service (COARDS), these conventions constitute a standard set of metadata to include in netCDF files, allowing them to be shared and interchanged.</p><p>The COARDS Conventions are generalized and extended by the CF (Climate and Forecast) Metadata Conventions.</p>",
@@ -2079,8 +2092,8 @@
    ],
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.openmicroscopy.org/site/support/file-formats/ome-tiff"
+     "url": "https://docs.openmicroscopy.org/ome-model/6.3.1/ome-tiff/index.html",
+     "type": "website"
     }
    ],
    "slug": "ome-tiff-open-microscopy-environment-tiff",
@@ -2539,7 +2552,8 @@
   "96": {
    "description": "A standard for encoding archival finding aids using XML in archival and manuscript repositories, implementing the recommendations of the International Council on Archives <a href=\"https://www.ica.org/en/isadg-general-international-standard-archival-description-second-edition\">ISAD(G): General International Standard Archival Description</a>.",
    "keywords": [
-    "http://vocabularies.unesco.org/thesaurus/concept302"
+    "http://vocabularies.unesco.org/thesaurus/concept302",
+    "http://vocabularies.unesco.org/thesaurus/concept492"
    ],
    "locations": [
     {
@@ -3125,7 +3139,8 @@
     "http://vocabularies.unesco.org/thesaurus/concept492",
     "http://vocabularies.unesco.org/thesaurus/concept496",
     "http://rdamsc.bath.ac.uk/thesaurus/subdomain350",
-    "http://vocabularies.unesco.org/thesaurus/concept232"
+    "http://vocabularies.unesco.org/thesaurus/concept232",
+    "http://vocabularies.unesco.org/thesaurus/concept8030"
    ],
    "dataTypes": [
     "msc:datatype2"
@@ -3177,6 +3192,232 @@
     }
    ],
    "slug": "abcd-zoology"
+  },
+  "111": {
+   "title": "NBO-Q (4DN-BINA-OME-QUAREP Microscopy Metadata Specifications)",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept6903",
+    "http://vocabularies.unesco.org/thesaurus/concept11102"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/WU-BIMAC/NBOMicroscopyMetadataSpecs/blob/master/Model/stable%20version/v02-01/NBO_MicroscopyMetadataSpecifications_ALL.xsd",
+     "type": "XSD"
+    },
+    {
+     "url": "https://github.com/WU-BIMAC/4DNMetadataSchemaXSD2JSONConverter/blob/master/latest/fullSchema.json",
+     "type": "JSON"
+    }
+   ],
+   "slug": "nbo-q-4dn-bina-ome-quarep-microscopy-metadata-specifications"
+  },
+  "112": {
+   "title": "REMBI (Recommended Metadata for Biological Images)",
+   "description": "Recommended Metadata for Biological Images (REMBI) provides guidelines for metadata for biological images to enable the FAIR sharing of scientific data. REMBI is the result of the bioimaging community coming together to develop metadata standards that describe the imaging data itself, together with supporting metadata such as those describing the biological study and sample.",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain270"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.ebi.ac.uk/bioimage-archive/rembi-help-overview/",
+     "type": "website"
+    },
+    {
+     "url": "https://www.ebi.ac.uk/bioimage-archive/rembi-model-reference/",
+     "type": "document"
+    }
+   ],
+   "slug": "rembi-recommended-metadata-for-biological-images"
+  },
+  "113": {
+   "title": "Brain Imaging Data Structure (BIDS)",
+   "description": "A simple and intuitive way to organize and describe your neuroimaging and behavioral data.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept4041",
+    "http://vocabularies.unesco.org/thesaurus/concept4295",
+    "http://vocabularies.unesco.org/thesaurus/concept4304"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://bids.neuroimaging.io/index.html",
+     "type": "website"
+    },
+    {
+     "url": "https://bids-specification.readthedocs.io/en/stable/01-introduction.html",
+     "type": "document"
+    }
+   ],
+   "slug": "brain-imaging-data-structure-bids"
+  },
+  "114": {
+   "title": "CIDOC CRM",
+   "description": "CIDOC Conceptual Reference Model (CRM) is a conceptual model used in cultural heritage to enable information integration. It provides definitions and a structured framework to describe concepts, relationships, and data used in cultural heritage documentation. The CIDOC CRM, developed and maintained over a period of more than 20 years, was initially proposed by the CIDOC Documentation Standards Working Group and is currently managed by the CIDOC CRM SIG, both of which are working groups of the CIDOC Council. In December 2006, it received official recognition as an ISO standard, and this status was reaffirmed in 2014 under the ISO 21127:2014 designation.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept269",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain325",
+    "http://vocabularies.unesco.org/thesaurus/concept298",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain360",
+    "http://vocabularies.unesco.org/thesaurus/concept496",
+    "http://vocabularies.unesco.org/thesaurus/concept492"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://cidoc-crm.org/",
+     "type": "website"
+    },
+    {
+     "url": "https://www.cidoc-crm.org/versions-of-the-cidoc-crm",
+     "type": "document"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "crm",
+     "uri": "http://www.cidoc-crm.org/cidoc-crm/"
+    }
+   ],
+   "slug": "cidoc-crm"
+  },
+  "115": {
+   "title": "CRMsci",
+   "description": "CRMsci is the extension for scientific observation and is specifically designed to support the documentation and integration of scientific data.\r\nIt provides a structured framework for capturing and describing scientific observations, measurements, and experiments in various domains such as environmental studies, natural sciences, and biodiversity research.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept269",
+    "http://vocabularies.unesco.org/thesaurus/concept106"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://cidoc-crm.org/crmsci/",
+     "type": "document"
+    }
+   ],
+   "slug": "crmsci"
+  },
+  "116": {
+   "title": "CRMdig",
+   "description": "CRMdig, for digital preservation, is an extension tailored for the domain of digital preservation. It provides a conceptual framework for documenting and managing the lifecycle of digital objects, ensuring their long-term preservation and accessibility. \r\nCRMdig incorporates additional classes and relationships to capture the unique characteristics and requirements of digital preservation, including concepts such as file formats, metadata, migration, authenticity, and provenance.\r\nIt can be used to model and manage digital collections, establish preservation policies, and implement strategies for the sustainable preservation of digital materials.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept274",
+    "http://vocabularies.unesco.org/thesaurus/concept8030"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/crmdig/",
+     "type": "website"
+    }
+   ],
+   "slug": "crmdig"
+  },
+  "117": {
+   "title": "LRMoo",
+   "description": "LRMOO, formerly known as FRBoo, is an extension, developed in collaboration with IFLA, for bibliographic information and library cataloguing. It provides a conceptual framework for describing bibliographic entities and their relationships in a structured manner by introducing classes, properties, and relationships that allow for the representation of bibliographic resources, such as books, articles, and other library materials, along with their authors, editions, and related works.\r\nLRMoo facilitates the organization and retrieval of bibliographic information by providing a consistent and standardized approach to cataloguing. It enables the modelling of complex relationships between different versions, translations, and editions of a work, as well as the association of works with their creators and subjects.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept457"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/frbroo/ModelVersion/version-0.9.3",
+     "type": "document"
+    }
+   ],
+   "slug": "lrmoo"
+  },
+  "118": {
+   "title": "CRMarchaeo",
+   "description": "CRMarchaeo is an extension designed to address the documentation and management of archaeological data and excavation processes. CRMarchaeo expands upon the CIDOC CRM base ontology by introducing additional classes, properties, and relationships that enable the representation of archaeological entities and their contextual information.\r\nIt also provides a structured framework for capturing and describing archaeological sites, artefacts, stratigraphy, excavation processes, and related archaeological concepts.\r\nIt supports the documentation of archaeological contexts, including the spatial and temporal dimensions of excavations, stratigraphic relationships, and the association of artefacts with specific layers or features.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept298"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/crmarchaeo/",
+     "type": "document"
+    }
+   ],
+   "slug": "crmarchaeo"
+  },
+  "119": {
+   "title": "CRMtex",
+   "description": "CRMtex is the extension defined to address the documentation and representation of text-related cultural heritage objects. It provides a structured framework for describing various types of textual objects, including inscriptions, papyri, manuscripts, and other ancient texts. It aims to facilitate the organization and retrieval of text-related cultural heritage objects by providing a standardised approach to their documentation and description.\r\nCRMtex allows cultural heritage institutions, libraries, and research projects to manage and share textual resources effectively. It also enhances the interoperability of text-related data, enabling the integration of textual information from diverse sources, to facilitate scholarly research, textual analysis, and the preservation of textual cultural entities for future generations.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept269",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain330"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/crmtex/",
+     "type": "document"
+    }
+   ],
+   "slug": "crmtex"
+  },
+  "120": {
+   "title": "TEI/EPIDOC",
+   "description": "TEI/EPIDOC is a collaborative effort that combines the expertise of EpiDoc and the Text Encoding Initiative (TEI). It establishes standardised guidelines and tools for encoding scholarly and educational editions of ancient documents, embracing inscriptions, papyri, manuscripts, and other text-bearing objects. By leveraging a subset of TEI's standard, TEI/EPIDOC enables the representation of texts in a digital form while also addressing the historical context and materiality of the objects.\r\nThis comprehensive approach allows scholars to publish digital editions that not only encompass the transcription and editorial treatment of the texts but also provide insights into the objects themselves. As a result, TEI/EPIDOC enriches our understanding of ancient civilizations and facilitates the dissemination of knowledge about their tangible heritage.\r\nTEI/EPIDOC is currently employed by the EAGLE Project and Epigraphy.info.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept298",
+    "http://vocabularies.unesco.org/thesaurus/concept302",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain330",
+    "http://vocabularies.unesco.org/thesaurus/concept269"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://epidoc.stoa.org/",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/EpiDoc",
+     "type": "website"
+    }
+   ],
+   "slug": "teiepidoc"
+  },
+  "121": {
+   "title": "CESSDA Data Catalogue DDI Profiles",
+   "description": "The profiles specify the metadata requirements of the CESSDA Data Catalogue, based on the CESSDA Metadata Model and the DDI specifications.",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain405"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://cmv.cessda.eu/documentation/profiles.html",
+     "type": "website"
+    }
+   ],
+   "slug": "cessda-data-catalogue-ddi-profiles"
   }
  },
  "g": {
@@ -3390,14 +3631,14 @@
    "slug": "ceos-international-directory-network"
   },
   "20": {
-   "description": "<p>Provides a seamless interface to datasets from social science data archives across Europe using the CESSDA MLI profile of DDI.</p>",
+   "description": "<p>The CDC is a one-stop shop for searching and discovering European social science data. The presented data includes a range of data types including quantitative, qualitative or mixed-modes data, covering both cross-sectional and longitudinal studies, as well as recently collected and historical data. </p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.cessda.org/accessing/catalogue/"
+     "url": "https://datacatalogue.cessda.eu/",
+     "type": "website"
     }
    ],
-   "name": "CESSDA Catalogue",
+   "name": "CESSDA Data Catalogue",
    "slug": "cessda-catalogue"
   },
   "21": {
@@ -3744,8 +3985,8 @@
    "description": "<p>The ICAT website's list of the facilities and organisations usingthe CSMD-based ICAT software.</p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://code.google.com/p/icatproject/wiki/UseOfICAT"
+     "url": "https://icatproject.org/collaboration/facilities/",
+     "type": "website"
     }
    ],
    "name": "ICAT Implementations",
@@ -3840,8 +4081,8 @@
    "description": "<p>Japan's independent administrative institution that handles research and development in space and aviation areas.</p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.jaxa.jp/index_e.html"
+     "url": "https://global.jaxa.jp/",
+     "type": "website"
     }
    ],
    "name": "JAXA (Japan Aerospace Exploration Agency)",
@@ -4688,6 +4929,171 @@
     }
    ],
    "slug": "aims-agricultural-information-management-standards"
+  },
+  "132": {
+   "name": "BINA (BioImaging North America)",
+   "description": "BioImaging North America (BINA) engages bioimaging scientists across North America by creating an inclusive and supportive community to share, advance, and succeed together. \r\n\r\nBINA's work is based on four pillars: Interaction, Education, Advocacy, Standardization.\r\n\r\nBINA's core values are:\r\n1) Community – building collaboration and partnership to achieve shared goals. \r\n2) Inclusion – fostering a welcoming and diverse environment to encourage participation and individual contributions.\r\n3) Excellence – working with rigor and integrity to ensure reproducible and quantitative data.",
+   "types": [
+    "professional group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.bioimagingnorthamerica.org",
+     "type": "website"
+    }
+   ],
+   "slug": "bioimaging-north-america"
+  },
+  "133": {
+   "name": "QUAREP-LiMi (Quality Assessment and Reproducibility for Instruments & Images in Light Microscopy)",
+   "description": "QUAREP-LiMi is a group of enthusiastic light microscopists from Academia and Industry, all interested in improving quality assessment (QA) and quality control (QC) in light microscopy. \r\n\r\nWe came together in our first online meeting in April 2020 with about 50 attendees. By now (25th of April 2023), the group has grown to more than 500 people from 36 countries worldwide. We have members from national microscopy communities, companies involved in the microscopy business, organizations or institutions related to standardization on a national or international level, and scientific publishers and observers from funding agencies (see the graph below and on the member page for an overview).\r\n\r\nQUAREP-LiMi is open to new members, and we look forward to hearing from you. If you want to join the initiative, fill out our form.  For any further questions, don't hesitate to contact us.",
+   "types": [
+    "professional group"
+   ],
+   "locations": [
+    {
+     "url": "https://quarep.org",
+     "type": "website"
+    }
+   ],
+   "slug": "quarep-limi-quality-assessment-and-reproducibility-for-instruments-imag"
+  },
+  "134": {
+   "name": "British Museum",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.britishmuseum.org/",
+     "type": "website"
+    }
+   ],
+   "slug": "british-museum"
+  },
+  "135": {
+   "name": "ARIADNE RI",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://ariadne-infrastructure.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "ariadne-ri"
+  },
+  "136": {
+   "name": "MINGEI",
+   "types": [
+    "archive"
+   ],
+   "locations": [
+    {
+     "url": "https://www.mingei-project.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "mingei"
+  },
+  "137": {
+   "name": "PARTHENOS",
+   "types": [
+    "archive"
+   ],
+   "locations": [
+    {
+     "url": "https://www.parthenos-project.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "parthenos"
+  },
+  "138": {
+   "name": "4CH",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.4ch-project.eu",
+     "type": "website"
+    }
+   ],
+   "slug": "4ch"
+  },
+  "139": {
+   "name": "Arches",
+   "types": [
+    "professional group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.archesproject.org",
+     "type": "website"
+    }
+   ],
+   "slug": "arches",
+   "description": "Arches is an open-source data management platform that is freely available for organizations worldwide to install, configure, and extend in accordance with their individual needs and without restrictions on its use. Arches was originally developed for the cultural heritage field by the Getty Conservation Institute and World Monuments Fund. Due to the complex and varied nature of cultural heritage data, and to promote interoperability and sustainable data practices, the Arches Platform has been developed as a standards-based, comprehensive and flexible platform that supports a wide array of uses. The Arches Project has an established international community of developers, service providers, and specialists from multiple domains that collaborates, shares ideas and resources, explores solutions, and provides guidance and support."
+  },
+  "140": {
+   "name": "Social Sciences & Humanities Open Cluster",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://sshopencloud.eu/sshoc-eosc",
+     "type": "website"
+    },
+    {
+     "url": "https://sshopencloud.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "social-sciences-humanities-open-cloud-sshoc",
+   "description": "Although the H2020 project SSHOC (Social Sciences & Humanities Open Cloud) came to an end in April 2022, it will have a lasting effect on the research infrastructure ( RI) landscape and on the collaboration between the European research infrastructures from the SSH domain, their common service offer, as well as the position of this RI cluster in the wider landscape of research infrastructures. "
+  },
+  "141": {
+   "name": "IPERION HS",
+   "description": "The IPERION HS consortium is determined to take up the challenge outlined in the Horizon 2020 for European research infrastructures, which calls for the establishment of a unique European research infrastructure for Heritage Science. Heritage Science is the interdisciplinary domain of scientific study of heritage.",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.iperionhs.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "iperion-hs"
+  },
+  "142": {
+   "name": "The National Gallery",
+   "description": "<p>The National Gallery houses the national collection of paintings in the Western European tradition from the 13th to the 19th centuries.</p>\r\n\r\n<p>\"Research is a constant and fundamental activity at the National Gallery, helping to underpin many areas of our work\" <a href=\"https://www.nationalgallery.org.uk/research/about-research\">https://www.nationalgallery.org.uk/research/about-research</a></p>",
+   "types": [
+    "archive",
+    "professional group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.nationalgallery.org.uk/",
+     "type": "website"
+    }
+   ],
+   "slug": "the-national-gallery"
+  },
+  "143": {
+   "name": "CESSDA ERIC ",
+   "description": "CESSDA (Consortium of European Social Science Data Archives) provides large-scale, integrated and sustainable data services to the social sciences. It brings together social science data archives across Europe, with the aim of promoting the results of social science research and supporting national and international research and cooperation.",
+   "locations": [
+    {
+     "url": "https://www.cessda.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "cessda-eric"
   }
  },
  "t": {
@@ -5594,6 +6000,123 @@
     }
    ],
    "slug": "ioos-compliance-checker"
+  },
+  "72": {
+   "title": "Micro-Meta App",
+   "description": "For quality, interpretation, reproducibility and sharing value, microscopy images should be accompanied by detailed descriptions of the conditions that were used to produce them. Micro-Meta App is an intuitive, highly interoperable, open-source software tool that was developed in the context of the 4D Nucleome (4DN) consortium and is designed to facilitate the extraction and collection of relevant microscopy metadata as specified by the recent 4DN-BINA-OME tiered-system of Microscopy Metadata specifications. In addition to substantially lowering the burden of quality assurance, the visual nature of Micro-Meta App makes it particularly suited for training purposes.",
+   "types": [
+    "graphical (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/WU-BIMAC/MicroMetaApp-Electron/releases/latest",
+     "type": "service"
+    },
+    {
+     "url": "https://github.com/WU-BIMAC/MicroMetaApp-React",
+     "type": "source"
+    },
+    {
+     "url": "https://wu-bimac.github.io/MicroMetaApp.github.io/",
+     "type": "website"
+    },
+    {
+     "url": "https://micrometaapp-docs.readthedocs.io/en/latest/index.html",
+     "type": "document"
+    },
+    {
+     "url": "https://doi.org/10.1038/s41592-021-01315-z",
+     "type": "document"
+    },
+    {
+     "url": "https://www.protocols.io/view/getting-started-with-micro-meta-app-tutorial-36wgq7ddxvk5/v7",
+     "type": "document"
+    }
+   ],
+   "creators": [
+    {
+     "givenName": "Caterina",
+     "familyName": "Strambio-De-Castillia"
+    },
+    {
+     "givenName": "Alessandro",
+     "familyName": "Rigano"
+    }
+   ],
+   "slug": "micro-meta-app"
+  },
+  "73": {
+   "title": "Toolbox for Sensitive Data Objects",
+   "types": [
+    "web application"
+   ],
+   "locations": [
+    {
+     "url": "https://tsdo.ecrin-rms.org",
+     "type": "application"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Christian Ohmann",
+     "givenName": "Christian",
+     "familyName": "Ohmann"
+    },
+    {
+     "fullName": "Maria Panagiotopoulou",
+     "givenName": "Maria ",
+     "familyName": "Panagiotopoulou"
+    }
+   ],
+   "slug": "toolbox-for-sensitive-data",
+   "description": "For life science infrastructures, sensitive data generate an additional layer of complexity. Cross-domain categorisation and discovery of digital resources related to sensitive data presents major interoperability challenges. To support this FAIRification process, a toolbox demonstrator aiming at support for discovery of digital objects related to sensitive data (e.g., regulations, guidelines, best practice, tools) has been developed. The toolbox is based upon a categorisation system developed and harmonised across a cluster of 6 life science research infrastructures. Three different versions were built, tested by subsequent pilot studies, finally leading to a system with 7 main categories (sensitive data type, resource type, research field, data type, stage in data sharing life cycle, geographical scope, specific topics). 109 resources attached with the tags in pilot study 3 were used as the initial content for the toolbox demonstrator, a software tool allowing searching of digital objects linked to sensitive data with filtering based upon the categorisation system. Important next steps are a broad evaluation of the usability and user-friendliness of the toolbox, extension to more resources, broader adoption by different life-science communities, and a long-term vision for maintenance and sustainability.\r\nfrom: David, R., Ohmann, C., Boiten, JW. et al. An iterative and interdisciplinary categorisation process towards FAIRer digital resources for sensitive life-sciences data. Sci Rep 12, 20989 (2022). https://doi.org/10.1038/s41598-022-25278-z"
+  },
+  "74": {
+   "title": "ARIADNE Portal",
+   "types": [
+    "web service"
+   ],
+   "locations": [
+    {
+     "url": "https://portal.ariadne-infrastructure.eu/",
+     "type": "website"
+    }
+   ],
+   "slug": "ariadne-portal"
+  },
+  "75": {
+   "title": "X3ML Mapping Tool",
+   "description": "The Centre for Cultural Informatics works as competence center for the CIDOC CRM (ISO 21127), by building up and exchanging application know-how, consultancy to implementers and researchers, and contribution to the dissemination, maintenance and evolution of the standard itself.",
+   "types": [
+    "web application",
+    "terminal (cross-platform)",
+    "graphical (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://www.ics.forth.gr/isl/x3ml-toolkit",
+     "type": "website"
+    }
+   ],
+   "slug": "x3ml-mapping-tool"
+  },
+  "76": {
+   "title": "FastCat",
+   "description": "FastCat is a Web-based system designed for historians and other researchers who need to manually digitize structured and semi structured archival documents in a fast and accurate way to create their research dataset.",
+   "types": [
+    "web application"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/isl/FastCat",
+     "type": "source"
+    },
+    {
+     "url": "https://isl.ics.forth.gr/FastCatTeam/",
+     "type": "website"
+    }
+   ],
+   "slug": "fastcat"
   }
  },
  "c": {
@@ -6199,6 +6722,146 @@
     }
    ],
    "slug": "dublin-core_TO_rif-cs-registry"
+  },
+  "33": {
+   "name": "LIDO to CIDOC CRM",
+   "description": "A mapping between LIDO v1.0 and CIDOC-CRM v6.0.",
+   "locations": [
+    {
+     "url": "https://cidoc-crm.org/Resources/mappings-between-lido-v1.0-and-cidoc-crm-v6.0-in-x3ml-ver.1",
+     "type": "document"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Lida Charami",
+     "givenName": "Lida",
+     "familyName": "Charami"
+    },
+    {
+     "fullName": "Martin Doerr",
+     "givenName": "Martin",
+     "familyName": "Doerr"
+    }
+   ],
+   "slug": "lido-to-cidoc-crm"
+  },
+  "34": {
+   "name": "MIDAS-Heritage to CIDOC CRM",
+   "description": "A mapping from MIDAS-Heritage to CIDOC CRM.",
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/midas_map.xls",
+     "type": "document"
+    }
+   ],
+   "slug": "midas-heritage-to-cidoc-crm"
+  },
+  "35": {
+   "name": "Dublin Core to CIDOC CRM",
+   "description": "The document describes the mapping of the DC-types to the CIDOC CRM version 4.2.2. It's a Technical Report for DELOS WP5-Task 5.5. \"Ontology Driven Interoperability\", January 2007.\r\nThe mapping of the DC-types to the CIDOC CRM version 4.2.2. was also presented at C. Kakali, I. Lourdi, T. Stasinopoulou, L. Bountouri, C. Papatheodorou, M. Doerr, M. Gergatsoulis, \"Integrating Dublin Core Metadata for Cultural Heritage Collections Using Ontologies, Proceedings of the 7th International Conference on Dublin Core and Metadata Applications, DC-2007, Singapore, August 2007, pp. 128-139. This paper also presents a mapping from the Dublin Core Collection Application Profile (DCCAP) to CRM.\r\n\r\nThe document describes the mapping of the Dublin Core Element set to the CIDOC CRM version 2.3 and the Agios Pavlos extensions.",
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/WP5-T5_5-DC2CRMmapping-060728v0_2-final.doc",
+     "type": "document"
+    },
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/dc_to_crm_mapping.pdf",
+     "type": "document"
+    },
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/dc_to_crm_mapping.rtf",
+     "type": "document"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Christos Papatheodorou",
+     "givenName": "Christos",
+     "familyName": "Papatheodorou"
+    },
+    {
+     "fullName": "Konstantia Kakali",
+     "givenName": "Konstantia",
+     "familyName": "Kakali"
+    },
+    {
+     "fullName": "Martin Doerr",
+     "givenName": "Martin",
+     "familyName": "Doerr"
+    },
+    {
+     "fullName": "Thomais Stasinopoulo",
+     "givenName": "Thomais",
+     "familyName": "Stasinopoulo"
+    }
+   ],
+   "slug": "dublin-core-to-cidoc-crm"
+  },
+  "36": {
+   "name": "EAD to CIDOC CRM",
+   "description": "Mapping of the EAD to the CIDOC CRM version 4.2.2.\r\n\r\nDescribed in the technical report of DELOS WP5-Task 5.5 \"Ontology Driven Interoperability\".",
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/WP5-T5_5-ead2crm-mapping-060728v0_2-final.doc",
+     "type": "document"
+    },
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/ead.rtf",
+     "type": "document"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Thomais Stasinopoulou",
+     "givenName": "Thomais",
+     "familyName": "Stasinopoulou"
+    },
+    {
+     "fullName": "Martin Doerr",
+     "givenName": "Martin",
+     "familyName": "Doerr"
+    },
+    {
+     "fullName": "Konstantia Kakali",
+     "givenName": "Konstantia",
+     "familyName": "Kakali"
+    },
+    {
+     "fullName": "Lina Bountouri",
+     "givenName": "Lina",
+     "familyName": "Bountouri"
+    },
+    {
+     "fullName": "Irene Lourdi",
+     "givenName": "Irene",
+     "familyName": "Lourdi"
+    },
+    {
+     "fullName": "Manolis Gergatsoulis",
+     "givenName": "Manolis",
+     "familyName": "Gergatsoulis"
+    }
+   ],
+   "slug": "ead-to-cidoc-crm"
+  },
+  "37": {
+   "name": "MARC (Machine-Readable Cataloging) to CIDOC CRM",
+   "description": "A mapping from the UNIMARC Bibliographic format (2nd edition Update 4 2002) to the semantic model CIDOC CRM (version 4.0 April 2004).",
+   "locations": [
+    {
+     "url": "https://www.cidoc-crm.org/sites/default/files/UNIMARCB_CRM.zip",
+     "type": "document"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Patrick Le Bœuf",
+     "givenName": "Patrick",
+     "familyName": "Le Bœuf"
+    }
+   ],
+   "slug": "marc-machine-readable-cataloging-to-cidoc-crm"
   }
  },
  "e": {},
@@ -6615,6 +7278,13 @@
    "@id": "msc:m50",
    "parent schemes": [
     "msc:m13"
+   ],
+   "users": [
+    "msc:g20",
+    "msc:g143"
+   ],
+   "funders": [
+    "msc:g143"
    ]
   },
   "49": {
@@ -7022,7 +7692,8 @@
   "110": {
    "@id": "msc:t22",
    "supported schemes": [
-    "msc:m13"
+    "msc:m13",
+    "msc:m50"
    ]
   },
   "111": {
@@ -7595,7 +8266,16 @@
    ]
   },
   "184": {
-   "@id": "msc:c30"
+   "@id": "msc:c30",
+   "input schemes": [
+    "msc:m46"
+   ],
+   "output schemes": [
+    "msc:m98"
+   ],
+   "maintainers": [
+    "msc:g118"
+   ]
   },
   "185": {
    "@id": "msc:c31",
@@ -7716,6 +8396,9 @@
    "@id": "msc:m109",
    "maintainers": [
     "msc:g130"
+   ],
+   "parent schemes": [
+    "msc:m114"
    ]
   },
   "201": {
@@ -7723,6 +8406,201 @@
     "msc:m1"
    ],
    "@id": "msc:m110"
+  },
+  "202": {
+   "parent schemes": [
+    "msc:m29"
+   ],
+   "funders": [
+    "msc:g105"
+   ],
+   "@id": "msc:m111",
+   "users": [
+    "msc:g105",
+    "msc:g132",
+    "msc:g133"
+   ],
+   "maintainers": [
+    "msc:g132",
+    "msc:g133"
+   ]
+  },
+  "203": {
+   "supported schemes": [
+    "msc:m111"
+   ],
+   "maintainers": [
+    "msc:g132",
+    "msc:g133"
+   ],
+   "funders": [
+    "msc:g105"
+   ],
+   "@id": "msc:t72"
+  },
+  "204": {
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:m114",
+   "users": [
+    "msc:g134",
+    "msc:g135",
+    "msc:g136",
+    "msc:g137",
+    "msc:g138",
+    "msc:g139",
+    "msc:g140",
+    "msc:g141",
+    "msc:g142"
+   ]
+  },
+  "205": {
+   "parent schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:m115"
+  },
+  "206": {
+   "parent schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:m116"
+  },
+  "207": {
+   "parent schemes": [
+    "msc:m114"
+   ],
+   "@id": "msc:m117"
+  },
+  "208": {
+   "parent schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:m118"
+  },
+  "209": {
+   "parent schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:m119"
+  },
+  "210": {
+   "input schemes": [
+    "msc:m109"
+   ],
+   "output schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:c33"
+  },
+  "211": {
+   "input schemes": [
+    "msc:m24"
+   ],
+   "output schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:c34"
+  },
+  "212": {
+   "input schemes": [
+    "msc:m15"
+   ],
+   "output schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:c35"
+  },
+  "213": {
+   "input schemes": [
+    "msc:m96"
+   ],
+   "output schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:c36"
+  },
+  "214": {
+   "input schemes": [
+    "msc:m88"
+   ],
+   "output schemes": [
+    "msc:m114"
+   ],
+   "maintainers": [
+    "msc:g130"
+   ],
+   "@id": "msc:c37"
+  },
+  "215": {
+   "supported schemes": [
+    "msc:m114"
+   ],
+   "@id": "msc:t74",
+   "maintainers": [
+    "msc:g135"
+   ],
+   "funders": [
+    "msc:g135"
+   ]
+  },
+  "216": {
+   "supported schemes": [
+    "msc:m114"
+   ],
+   "@id": "msc:t75"
+  },
+  "217": {
+   "supported schemes": [
+    "msc:m114"
+   ],
+   "@id": "msc:t76"
+  },
+  "218": {
+   "parent schemes": [
+    "msc:m99"
+   ],
+   "@id": "msc:m120"
+  },
+  "219": {
+   "parent schemes": [
+    "msc:m50"
+   ],
+   "maintainers": [
+    "msc:g143"
+   ],
+   "funders": [
+    "msc:g143"
+   ],
+   "users": [
+    "msc:g20"
+   ],
+   "@id": "msc:m121"
   }
  }
 }
