@@ -674,6 +674,40 @@
        "url": "https://schema.datacite.org/meta/kernel-4.4/example/datacite-example-full-v4.xml"
       }
      ]
+    },
+    {
+     "number": "4.5",
+     "issued": "2024-01-22",
+     "locations": [
+      {
+       "url": "https://datacite-metadata-schema.readthedocs.io/_/downloads/en/4.5/pdf/",
+       "type": "document"
+      },
+      {
+       "url": "https://schema.datacite.org/meta/kernel-4.5/metadata.xsd",
+       "type": "XSD"
+      }
+     ],
+     "identifiers": [
+      {
+       "id": "10.14454/g8e5-6293",
+       "scheme": "DOI"
+      },
+      {
+       "id": "10.14454/znvd-6q68",
+       "scheme": "DOI"
+      }
+     ],
+     "samples": [
+      {
+       "title": "Full DataCite XML example",
+       "url": "https://schema.datacite.org/meta/kernel-4.5/example/datacite-example-full-v4.xml"
+      },
+      {
+       "title": "Full DataCite JSON example",
+       "url": "https://api.test.datacite.org/dois/10.82433/B09Z-4K37?publisher=true&affiliation=true"
+      }
+     ]
     }
    ]
   },
@@ -1036,12 +1070,12 @@
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://isatab.sourceforge.net/docs/ISA-TAB_release-candidate-1_v1.0_24nov08.pdf"
+     "url": "http://isatab.sourceforge.net/docs/ISA-TAB_release-candidate-1_v1.0_24nov08.pdf",
+     "type": "document"
     },
     {
-     "type": "website",
-     "url": "http://isatab.sourceforge.net/format.html"
+     "url": "https://isa-tools.org/",
+     "type": "website"
     }
    ],
    "slug": "isa-tab",
@@ -3466,7 +3500,7 @@
   },
   "123": {
    "title": "MEDIN discovery metadata standard",
-   "description": "The MEDIN Discovery Metadata Standard is a marine profile of the UK government Standard GEMINI2 and also complies with other international conventions such as INSPIRE and ISO19115.",
+   "description": "The MEDIN Discovery Metadata Standard is a marine profile of the UK government Standard GEMINI and also complies with other international conventions such as INSPIRE and ISO19115.",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept2634",
     "http://vocabularies.unesco.org/thesaurus/concept10925",
@@ -3558,6 +3592,33 @@
     }
    ],
    "slug": "amb-general-metadata-profile-for-educational-resources"
+  },
+  "127": {
+   "title": "ODAM Structural Metadata",
+   "description": "Open Data for Access and Mining (ODAM) Structural Metadata is a format describing how the metadata should be formatted and what should be included to ensure ODAM compliance for a data set. To comply with this format, two metadata files in TSV format are required in addition to the data file(s). These two files describe the metadata of the dataset, which includes descriptions of measures and structural metadata like references between tables. The metadata lets non-expert users explore and visualize your data. By making data interoperable and reusable by both humans and machines, it also encourages data dissemination according to FAIR principles. The structural metadata is specified in section 'Data collection and preparation' on the website.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept231"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://inrae.github.io/ODAM/data-preparation/",
+     "type": "document"
+    },
+    {
+     "url": "https://inrae.github.io/ODAM/json-schema/",
+     "type": "JSON"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.1093/gigascience/giaa144",
+     "scheme": "DOI"
+    }
+   ],
+   "slug": "odam-structural-metadata"
   }
  },
  "g": {
@@ -5280,6 +5341,23 @@
     }
    ],
    "slug": "competence-center-interoperable-metadata-kim"
+  },
+  "147": {
+   "name": "INRAE",
+   "locations": [
+    {
+     "url": "https://www.inrae.fr/",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "003vg9w96",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "national-research-institute-for-agriculture-food-and-environment",
+   "description": "French National Institute for Research on Agriculture, Food and the Environment"
   }
  },
  "t": {
@@ -6383,6 +6461,86 @@
     }
    ],
    "slug": "cocoda-knowledge-organization-systems-management"
+  },
+  "81": {
+   "title": "Maggot",
+   "description": "description: <p>Sharing descriptive Metadata is the first essential step towards Open Scientific Data. With this in mind, Maggot was specifically designed to annotate datasets by creating a metadata file to attach to the storage space. Indeed, it allows users to easily add descriptive metadata to datasets produced within a collective of people (research unit, platform, multi-partner project, etc.). This approach fits perfectly into a data management plan as it addresses the issues of data organization and documentation, data storage and frictionless metadata sharing within this same collective and beyond.",
+   "types": [
+    "web application"
+   ],
+   "locations": [
+    {
+     "url": "https://inrae.github.io/pgd-mmdt/",
+     "type": "document"
+    },
+    {
+     "url": "https://github.com/inrae/pgd-mmdt",
+     "type": "source"
+    },
+    {
+     "url": "https://pmb-bordeaux.fr/maggot/",
+     "type": "application"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.15454/XF1NEY",
+     "scheme": "DOI"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Daniel Jacob",
+     "givenName": "Daniel",
+     "familyName": "Jacob"
+    },
+    {
+     "fullName": "François Ehrenmann",
+     "givenName": "François",
+     "familyName": "Ehrenmann"
+    }
+   ],
+   "slug": "maggot"
+  },
+  "82": {
+   "title": "ODAM Software Suite",
+   "description": "Experimental data table management software to make research data accessible and available for reuse with minimal effort on the part of the data provider. Designed to manage experimental data tables in an easy way for users, ODAM provides a model for structuring both data and metadata that facilitates data handling and analysis. It also encourages data dissemination according to FAIR principles by making the data interoperable and reusable by both humans and machines, allowing the dataset to be explored and then extracted in whole or in part as needed.",
+   "types": [
+    "web application",
+    "web service"
+   ],
+   "locations": [
+    {
+     "url": "https://inrae.github.io/ODAM/",
+     "type": "document"
+    },
+    {
+     "url": "https://github.com/inrae/ODAM",
+     "type": "source"
+    },
+    {
+     "url": "https://pmb-bordeaux.fr/dataexplorer/",
+     "type": "application"
+    },
+    {
+     "url": "https://app.swaggerhub.com/apis-docs/INRA-PMB/ODAM/1.2.0/",
+     "type": "service"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.1093/gigascience/giaa144",
+     "scheme": "DOI"
+    }
+   ],
+   "creators": [
+    {
+     "fullName": "Daniel Jacob",
+     "givenName": "Daniel",
+     "familyName": "Jacob"
+    }
+   ],
+   "slug": "odam-software-suite"
   }
  },
  "c": {
@@ -7258,6 +7416,9 @@
    ],
    "users": [
     "msc:g29"
+   ],
+   "parent schemes": [
+    "msc:m127"
    ]
   },
   "11": {
@@ -8970,6 +9131,47 @@
    "users": [
     "msc:g146"
    ]
+  },
+  "226": {
+   "supported schemes": [
+    "msc:m13",
+    "msc:m95",
+    "msc:m101"
+   ],
+   "@id": "msc:t81",
+   "maintainers": [
+    "msc:g147"
+   ],
+   "funders": [
+    "msc:g147"
+   ]
+  },
+  "227": {
+   "maintainers": [
+    "msc:g147"
+   ],
+   "funders": [
+    "msc:g147"
+   ],
+   "@id": "msc:t82",
+   "supported schemes": [
+    "msc:m127"
+   ]
+  },
+  "228": {
+   "parent schemes": [
+    "msc:m10"
+   ],
+   "maintainers": [
+    "msc:g147"
+   ],
+   "funders": [
+    "msc:g147"
+   ],
+   "users": [
+    "msc:g147"
+   ],
+   "@id": "msc:m127"
   }
  }
 }
