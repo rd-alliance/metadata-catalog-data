@@ -1279,7 +1279,8 @@
    "title": "PDBx/mmCIF (Protein Data Bank Exchange Dictionary and the Macromolecular Crystallographic Information Framework)",
    "versions": [
     {
-     "number": 4.051
+     "number": "5.401",
+     "issued": "2024-01-08"
     }
    ]
   },
@@ -3619,6 +3620,37 @@
     }
    ],
    "slug": "odam-structural-metadata"
+  },
+  "128": {
+   "title": "OEMetadata (Open Energy Metadata)",
+   "description": "Open Energy Metadata (OEMetadata) is a metadata standard for the energy domain.\r\nIt is an extensive set of metadata based on the tabular data package specifications and the FAIR principles. It is mainly developed for the Open Energy Platform (OEP).",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept9508",
+    "http://vocabularies.unesco.org/thesaurus/concept194",
+    "http://vocabularies.unesco.org/thesaurus/concept987"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/OpenEnergyPlatform/oemetadata",
+     "type": "website"
+    },
+    {
+     "url": "https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/schema.json",
+     "type": "JSON"
+    },
+    {
+     "url": "https://openenergyplatform.github.io/oemetadata/latest/metadata/metadata_key_description/",
+     "type": "document"
+    },
+    {
+     "url": "https://openenergyplatform.github.io/oemetadata/",
+     "type": "website"
+    }
+   ],
+   "slug": "oemetadata-open-energy-metadata"
   }
  },
  "g": {
@@ -7416,9 +7448,6 @@
    ],
    "users": [
     "msc:g29"
-   ],
-   "parent schemes": [
-    "msc:m127"
    ]
   },
   "11": {
@@ -9172,6 +9201,12 @@
     "msc:g147"
    ],
    "@id": "msc:m127"
+  },
+  "229": {
+   "parent schemes": [
+    "msc:m10"
+   ],
+   "@id": "msc:m128"
   }
  }
 }
