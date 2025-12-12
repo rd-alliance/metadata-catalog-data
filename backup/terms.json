@@ -207,6 +207,13 @@
    "applies": [
     "tool"
    ]
+  },
+  "30": {
+   "id": "YAML",
+   "label": "YAML Schema",
+   "applies": [
+    "scheme"
+   ]
   }
  },
  "type": {
@@ -362,8 +369,7 @@
    "id": "https://www.w3.org/TR/vocab-dcat/#class-dataset",
    "label": "Dataset"
   },
-  "3": {
-  },
+  "3": {},
   "4": {
    "id": "https://w3id.org/kim/hcrt/",
    "label": "Educational resource"

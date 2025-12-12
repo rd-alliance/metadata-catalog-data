@@ -741,7 +741,7 @@
    ]
   },
   "13": {
-   "description": "<p>A widely used, international standard for describing data from the social, behavioral, and economic sciences. Two versions of the standard are currently maintained in parallel:</p><ul><li>DDI Codebook (or DDI version 2) is the simpler of the two, and intended for documenting simple survey data for exchange or archiving. Version 2.5 was released in January 2012.</li><li>DDI Lifecycle (or DDI version 3) is richer and may be used to document datasets at each stage of their lifecycle from conceptualization through to publication and reuse. It is modular and extensible. Version 3.2 was published in March 2014.</li></ul><p>Both versions are XML-based and defined using XML Schemas. They were developed and are maintained by the DDI Alliance.</p>",
+   "description": "<p>A widely used, international standard for describing data from the social, behavioral, and economic sciences. Two versions of the standard are currently maintained in parallel:</p><ul><li>DDI Codebook (or DDI version 2) is the simpler of the two, and intended for documenting simple survey data for exchange or archiving. Version 2.5 was released in January 2012.</li><li>DDI Lifecycle (or DDI versions 3 and 4) are richer and may be used to document datasets at each stage of their lifecycle from conceptualization through to publication and reuse. It is modular and extensible. Version 3.3 was published in April 2020. A beta for DDI 4 was released in 2025.</li></ul><p>Both versions 2 and 3 are XML-based and are defined using XML Schemas. Version 4 supports XML, RDF, and JSON representations. They were developed and are maintained by the DDI Alliance.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept425",
     "http://rdamsc.bath.ac.uk/thesaurus/subdomain625",
@@ -757,12 +757,12 @@
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://www.ddialliance.org/Specification/"
+     "url": "http://www.ddialliance.org/Specification/",
+     "type": "document"
     },
     {
-     "type": "website",
-     "url": "http://www.ddialliance.org/"
+     "url": "http://www.ddialliance.org/",
+     "type": "website"
     }
    ],
    "slug": "ddi-data-documentation-initiative",
@@ -795,8 +795,44 @@
      "number": "3.2",
      "title": "DDI Lifecycle",
      "valid": {
-      "start": "2014-03-12"
-     }
+      "start": "2014-03-12",
+      "end": "2020-04-15"
+     },
+     "locations": [
+      {
+       "url": "https://ddialliance.org/ddi-l_v3.2",
+       "type": "website"
+      }
+     ]
+    },
+    {
+     "number": "3.3",
+     "title": "DDI Lifecycle",
+     "issued": "2020-04-15",
+     "valid": {
+      "start": "2020-04-15"
+     },
+     "locations": [
+      {
+       "url": "https://ddialliance.org/ddi-l_v3.3",
+       "type": "website"
+      },
+      {
+       "url": "https://docs.ddialliance.org/DDI-Lifecycle/3.3/model/",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "4.0",
+     "title": "DDI Lifecycle",
+     "available": "2024-12-12",
+     "locations": [
+      {
+       "url": "https://docs.ddialliance.org/DDI-Lifecycle/dev/model/",
+       "type": "document"
+      }
+     ]
     }
    ]
   },
@@ -1110,7 +1146,7 @@
    "title": "ISO 19115"
   },
   "23": {
-   "description": "<p>A common portal to a group of nearly 40 checklists of Minimum Information for various biological disciplines. The MIBBI Foundry is developing a cross-analysis of these guidelines to create an intercompatible, extensible community of standards.</p><p>The concept was realized initially through the joint efforts of the Proteomics Standards Initiative, the Genomic Standards Consortium and the MGED RSBI Working Groups. The latest project to register with MIBBI is the MIABie guidelines for reporting biofilm research, as of January 2012.</p>",
+   "description": "<p>The MIBBI Project was an international collaboration seeking to harmonize the efforts of the various bioscience communities developing Minimum Information (MI) reporting guidelines or checklists. Approximately 40 such checklists registered with the project.</p><p>The MIBBI Foundry was an attempt to identify common features of the various MI checklists and codify them into modules. The aim was to evolve the existing checklists towards formal intercompatibility, and to enable new checklists to be produced by selecting and extending the available modules.</p><p>The concept was realized initially through the joint efforts of the Proteomics Standards Initiative, the Genomic Standards Consortium and the MGED RSBI Working Groups.</p><p>While the MIBBI Foundry did not develop to the point where it could become a true, technical parent standard for the MI checklists, the MIBBI Project provided a useful grouping of standards that shared a common purpose, philosophy and inspiration.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept218",
     "http://vocabularies.unesco.org/thesaurus/concept219",
@@ -1124,12 +1160,12 @@
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://mibbi.sourceforge.net/foundry.shtml"
+     "url": "https://web.archive.org/web/20120410103329/http://mibbi.sourceforge.net/foundry.shtml",
+     "type": "document"
     },
     {
-     "type": "website",
-     "url": "http://mibbi.sourceforge.net/portal.shtml"
+     "url": "https://web.archive.org/web/20120409192856/http://mibbi.sourceforge.net/",
+     "type": "website"
     }
    ],
    "slug": "mibbi-minimum-information-biological-and-biomedical-investigations",
@@ -2083,7 +2119,7 @@
    "title": "ISO 19115 North American Profile"
   },
   "71": {
-   "description": "<p>A profile developed in accordance with ISO 19115 rules by the Australian Ocean Data Centre that supports the documentation and discovery of marine spatial datasets.</p>",
+   "description": "<p>A profile that was developed in accordance with ISO 19115 rules by the Australian Ocean Data  Centre Joint Facility (AODCJF) that supported the documentation and discovery of marine spatial datasets. Management of more recent versions of the profile was undertaken by the Australian Ocean Data Network. Version 2.0 was published in 2015, with the Australian marine community moving to adopt ISO19915 from 2019.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept183",
     "http://rdamsc.bath.ac.uk/thesaurus/subdomain235",
@@ -2094,8 +2130,12 @@
    ],
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.aodc.org.au/index.php?id=37"
+     "url": "https://mcp-profile-docs.readthedocs.io/en/stable/",
+     "type": "document"
+    },
+    {
+     "url": "https://imos.org.au/data/about-the-australian-ocean-data-network",
+     "type": "website"
     }
    ],
    "slug": "marine-community-profile",
@@ -3137,8 +3177,8 @@
    ]
   },
   "108": {
-   "title": "Minimum Information about any (x) Sequence (MIxS)",
-   "description": "MIxS currently consists of three separate checklists; MIGS for genomes, MIMS for metagenomes, and MIMARKS for marker genes.\r\n\r\nTo create a single entry point to all minimum information checklists from the GSC and to the environmental packages, we created an overarching framework, the MIxS standard (publication in Nature Biotechnology). MIxS includes the technology-specific checklists from the previous MIGS and MIMS standards, provides a way of introducing additional checklists such as MIMARKS, and also allows annotation of sample data using environmental packages.",
+   "title": "MIxS (Minimum Information about Any Sequence)",
+   "description": "<p>MIxS is a superset of metadata elements that can be used to compile minimum information checklists for reporting sequencing data. It was developed by the Genomic Standards Consortium (GSC) as an overarching framework that could act as a single entry point for all their minimum information checklists (as reported in Nature Biotechnology).</p><p>MIxS includes the technology-specific checklists from the previous MIGS and MIMS standards (for genomes and metagenomes respectively), provides a way of introducing additional checklists such as MIMARKS (for marker sequences), and also allows annotation of sample data using environmental packages.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept16998",
     "http://rdamsc.bath.ac.uk/thesaurus/subdomain270",
@@ -3159,7 +3199,65 @@
      "uri": "https://w3id.org/mixs/vocab/"
     }
    ],
-   "slug": "minimum-information-about-any-x-sequence-mixs"
+   "slug": "minimum-information-about-any-x-sequence-mixs",
+   "versions": [
+    {
+     "number": "6.0.0",
+     "issued": "2022-03-24",
+     "locations": [
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/tree/mixs6.0.0",
+       "type": "website"
+      },
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/blob/mixs6.0.0/release/jsonschema/mixs.schema.json",
+       "type": "JSON"
+      }
+     ]
+    },
+    {
+     "number": "6.1.0",
+     "issued": "2022-06-06",
+     "locations": [
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/tree/mixs6.1.0",
+       "type": "website"
+      },
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/blob/mixs6.1.0/mixs/jsonschema/mixs.schema.json",
+       "type": "JSON"
+      }
+     ]
+    },
+    {
+     "number": "6.1.1",
+     "issued": "2023-10-09",
+     "locations": [
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs",
+       "type": "website"
+      },
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/blob/mixs6.1.1/mixs/jsonschema/mixs.schema.json",
+       "type": "JSON"
+      }
+     ]
+    },
+    {
+     "number": "6.2.0",
+     "issued": "2023-10-18",
+     "locations": [
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/tree/abe502d3ba387a0ac2067527dc9eac53dd1e079d",
+       "type": "website"
+      },
+      {
+       "url": "https://github.com/GenomicsStandardsConsortium/mixs/blob/v6.2.0/src/mixs/schema/mixs.yaml",
+       "type": "YAML"
+      }
+     ]
+    }
+   ]
   },
   "109": {
    "title": "LIDO (Lightweight Information Describing Objects)",
@@ -3638,11 +3736,11 @@
      "type": "website"
     },
     {
-     "url": "https://github.com/OpenEnergyPlatform/oemetadata/blob/develop/metadata/latest/schema.json",
+     "url": "https://github.com/OpenEnergyPlatform/oemetadata/blob/production/oemetadata/latest/schema.json",
      "type": "JSON"
     },
     {
-     "url": "https://openenergyplatform.github.io/oemetadata/latest/metadata/metadata_key_description/",
+     "url": "https://openenergyplatform.github.io/oemetadata/latest/oemetadata/metadata_key_description/",
      "type": "document"
     },
     {
@@ -3650,7 +3748,188 @@
      "type": "website"
     }
    ],
-   "slug": "oemetadata-open-energy-metadata"
+   "slug": "oemetadata-open-energy-metadata",
+   "identifiers": [
+    {
+     "id": "https://doi.org/10.25504/FAIRsharing.777897",
+     "scheme": "DOI"
+    }
+   ]
+  },
+  "129": {
+   "title": "MOD (Metadata for Ontology Description and Publication Ontology)",
+   "description": "MOD (Metadata for Ontology Description and Publication Ontology) is a metadata schema designed to describe semantic artefacts, such as ontologies, vocabularies, and terminologies, in a standardized and FAIR-compliant way. Developed in the RDA Vocabulary Service Interest Group (VSIG) then within the FAIR-IMPACT EOSC project, MOD is based on DCAT2 and builds on existing metadata standards like DC, Schema.org, ADMS, etc. to provide a structured framework for capturing essential information about these artefacts, including their provenance, licensing, versioning, and usage. The schema facilitates interoperability between ontology repositories and enables better discovery, reuse, and integration of semantic resources in various domains. It is the baseline for MOD-API a Web service API specification for operations on semantic artefact catalogues. MOD is openly available on GitHub, where it is maintained and extended based on community input.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept10614",
+    "http://vocabularies.unesco.org/thesaurus/concept10081",
+    "http://vocabularies.unesco.org/thesaurus/concept13409",
+    "http://vocabularies.unesco.org/thesaurus/concept13408",
+    "http://vocabularies.unesco.org/thesaurus/concept7984",
+    "http://vocabularies.unesco.org/thesaurus/concept12263"
+   ],
+   "dataTypes": [
+    "msc:datatype1",
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/FAIR-IMPACT/MOD",
+     "type": "website"
+    },
+    {
+     "url": "https://w3id.org/mod",
+     "type": "document"
+    },
+    {
+     "url": "https://github.com/FAIR-IMPACT/MOD/blob/main/mod.ttl",
+     "type": "RDFS"
+    }
+   ],
+   "namespaces": [
+    {
+     "prefix": "mod",
+     "uri": "https://w3id.org/mod/"
+    }
+   ],
+   "slug": "mod-metadata-for-ontology-description-and-publication-ontology"
+  },
+  "130": {
+   "title": "CIMR (Core Information for Metabolomics Reporting)",
+   "description": "CIMR was developed by the Metabolomics Standards Initiative (MSI) to specify guidelines for the minimum information to include when reporting metabolomics work. It was developed in textual form, but work is underway to develop a data model, exchange format and ontology for expressing the information in machine-actionable form.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept3954"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/MSI-Metabolomics-Standards-Initiative/CIMR/",
+     "type": "document"
+    }
+   ],
+   "slug": "cimr-core-information-for-metabolomics-reporting"
+  },
+  "131": {
+   "title": "GIATE (Guidelines for Information About Therapy Experiments)",
+   "description": "GIATE is a minimum information checklist for transparently reporting the purpose, methods and results of the therapeutic experiments. Resources are provided for compiling metadata records in spreadsheet form (GIATE-TAB), rather than using a machine-readable serialization, though machine readability is one of the stated objectives for the checklist.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept219",
+    "http://vocabularies.unesco.org/thesaurus/concept241"
+   ],
+   "slug": "giate-guidelines-for-information-about-therapy-experiments",
+   "versions": [
+    {
+     "number": "0.1",
+     "issued": "2011-03-18",
+     "locations": [
+      {
+       "url": "https://doi.org/10.1186/1756-0500-5-10",
+       "type": "document"
+      }
+     ],
+     "samples": [
+      {
+       "title": "GIATE-TAB spreadsheet completed for the CHT-25 phase 1 trial",
+       "url": "https://static-content.springer.com/esm/art%3A10.1186%2F1756-0500-5-10/MediaObjects/13104_2011_1347_MOESM3_ESM.XLS"
+      }
+     ]
+    }
+   ]
+  },
+  "132": {
+   "title": "geocore",
+   "description": "The geocore format is a standardless format that is able to store various metadata fields. It is based on the geoJSON format where the properties field of the geoJSON file stores the metadata for each record.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept17000"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://canadian-geospatial-platform.github.io/geocore/docs/geocore-format/",
+     "type": "website"
+    }
+   ],
+   "slug": "geocore"
+  },
+  "133": {
+   "title": "ISO 19115-3 - XML schema implementation for fundamental concepts",
+   "description": "An internationally-adopted schema for describing geographic information and services. It provides information about the identification, the extent, the quality, the spatial and temporal schema, spatial reference, and distribution of digital geographic data.\r\n\r\nSponsored by the International Standards Organisation, the first edition of ISO 19115 was published in 2023. \r\n\r\nAn extension of ISO 19115 and the main changes are as follows:\r\n\r\n    — cross-references to other documents have been updated; in particular, ISO 19139:2007 has been updated to ISO/TS 19139-1:2019;\r\n    — components have been reallocated to the relevant primary International Standards, notably ISO 19115-1:2014, ISO 19115-2:2019 and ISO 19103:2015;\r\n    — additional packages and namespaces derived by the aggregation of packages defined in ISO 19115-1:2014 and ISO 19115-2:20091 have been removed;\r\n    — tables have been consolidated in order to reduce repetition of information and to collocate information concerning requirements, conformance tests and the clauses to which they refer;\r\n    — elements in the XML schemas for ISO 19115-1:2014 and ISO 19115-2:2019 have been reordered in order to align with the order of attributes in the associated data dictionaries. Appropriate XML stylesheets (XSLT) have been generated to assist in the transformation of XML records from records conforming to previous versions of the schemas. The conceptual models in the HMMG have been augmented to include the attribute ordering as set out in the data dictionaries in ISO 19115-1:2014 plus ISO 19115-1:2014/Amd 1:2018 and ISO 19115-1:2014/Amd 2:2020 and ISO 19115-2:2019.",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept7430",
+    "http://vocabularies.unesco.org/thesaurus/concept3269",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain240",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain235",
+    "http://vocabularies.unesco.org/thesaurus/concept11433",
+    "http://vocabularies.unesco.org/thesaurus/concept172",
+    "http://vocabularies.unesco.org/thesaurus/concept159",
+    "http://vocabularies.unesco.org/thesaurus/concept11459",
+    "http://rdamsc.bath.ac.uk/thesaurus/subdomain250",
+    "http://vocabularies.unesco.org/thesaurus/concept6991",
+    "http://vocabularies.unesco.org/thesaurus/concept11905",
+    "http://vocabularies.unesco.org/thesaurus/concept8783"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://www.iso.org/obp/ui/#iso:std:iso:19115:-3:ed-1:v1:en",
+     "type": "document"
+    },
+    {
+     "url": "https://standards.iso.org/iso/19115/-3/",
+     "type": "website"
+    }
+   ],
+   "slug": "iso-19115-3-xml-schema-implementation-for-fundamental-concepts"
+  },
+  "134": {
+   "title": "iFDO - image FAIR Digital Object",
+   "description": "Achieving FAIRness and Openness of (marine) image data requires structured and standardised metadata on the image data itself and the visual and semantic image data content. This metadata shall be provided in the form of FAIR digital objects (FDOs). ",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept2634"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://marine-imaging.com/fair/",
+     "type": "website"
+    },
+    {
+     "url": "https://marine-imaging.com/fair/schemas/ifdo-v2.1.0.json",
+     "type": "JSON"
+    }
+   ],
+   "slug": "ifdo-image-fair-digital-object"
+  },
+  "135": {
+   "title": "Wildlife Disease Data Standard",
+   "description": "Our goal with the wildlife disease data standard is to describe interactions between hosts and parasites with sufficient detail and structure as to be useful, but not burdensome on the end user. In this case a parasite can be anything from a micro-parasite like a virus to a macro-parasite like a tick. We use this broad term because systems are complicated and a researcher may want to monitor interactions at multiple levels.\r\n\r\nThe standard has two components disease data and project metadata. The disease data component describes the contents and structure of data related to the detection (or not) of a parasite in/on a given host and is focused on data exchange. The project metadata component describes the contents and structure of data related to the creation of the disease data component and is focused on data discovery.\r\n\r\nThe disease data component allows us to create a collection of datasets that can be re-used, aggregated, and shared, while the project metadata component provides context for the data, makes it easier to find the dataset, and gives clear information about attribution and use",
+   "keywords": [
+    "http://vocabularies.unesco.org/thesaurus/concept8708",
+    "http://vocabularies.unesco.org/thesaurus/concept250",
+    "http://vocabularies.unesco.org/thesaurus/concept3505",
+    "http://vocabularies.unesco.org/thesaurus/concept8189",
+    "http://vocabularies.unesco.org/thesaurus/concept14258",
+    "http://vocabularies.unesco.org/thesaurus/concept2396",
+    "http://vocabularies.unesco.org/thesaurus/concept225"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "slug": "wildlife-disease-data-standard",
+   "locations": [
+    {
+     "url": "https://doi.org/10.5281/zenodo.15020049",
+     "type": "JSON"
+    },
+    {
+     "url": "https://github.com/viralemergence/wdds",
+     "type": "website"
+    }
+   ]
   }
  },
  "g": {
@@ -3710,11 +3989,11 @@
    "slug": "aus-vo-australian-virtual-observatory"
   },
   "6": {
-   "description": "<p>This portal is the primary access point for search, discovery, access and download of data collected by the Australian marine community. Uses the Marine Community Profile extension of ISO 19115</p>",
+   "description": "<p>This portal is the primary access point for search, discovery, access and download of data collected by the Australian marine community. Uses the ISO 19115 metadata standard</p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://portal.aodn.org.au/aodn/"
+     "url": "https://portal.aodn.org.au/",
+     "type": "website"
     }
    ],
    "name": "Australian Ocean Data Network Portal",
@@ -4260,12 +4539,13 @@
   "56": {
    "locations": [
     {
-     "type": "website",
-     "url": "http://imos.aodn.org.au/imos/"
+     "url": "https://imos.org.au/",
+     "type": "website"
     }
    ],
    "name": "Integrated Marine Observing System Portal",
-   "slug": "integrated-marine-observing-system-portal"
+   "slug": "integrated-marine-observing-system-portal",
+   "description": " A specific IMOS Portal has been superseded by the Australian Ocean Data Network Portal."
   },
   "57": {
    "locations": [
@@ -5390,6 +5670,23 @@
    ],
    "slug": "national-research-institute-for-agriculture-food-and-environment",
    "description": "French National Institute for Research on Agriculture, Food and the Environment"
+  },
+  "148": {
+   "name": "Colectica",
+   "description": "Colectica was launched in 2010 and creates a suite of metadata tools that helps design, explain, and share statistical research. Using common open data standards such as DDI, Colectica makes it simple to record all the important details about surveys, studies, longitudinal research, or data collections so that anyone reviewing data project understands their background and context. Colectica provides tools and services for organizations working in government statistics, survey research, data archives, or any field that publishes metadata documentation to share information in a standard format.",
+   "locations": [
+    {
+     "url": "https://www.colectica.com",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "https://ror.org/01ms6wc17",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "colectica"
   }
  },
  "t": {
@@ -5405,11 +5702,11 @@
    "title": "AgriMetamaker"
   },
   "2": {
-   "description": "<p>A GeoNetwork web application for metadata management and searching, with profiles available for two extensions of ISO 19115: ANZLIC and the Marine Community Profile.</p>",
+   "description": "<p>A GeoNetwork web application for metadata management and searching, with profiles available for two extensions of ISO 19115: ANZLIC and the Marine Community Profile. This application was managed by the Australian Ocean Data Network, and has been superseded by a GeoNework catalogue utilising ISO 19115.</p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://bluenetdev.its.utas.edu.au/download/bluenetmest.html"
+     "url": "http://bluenetdev.its.utas.edu.au/download/bluenetmest.html",
+     "type": "website"
     }
    ],
    "slug": "anz-mest-metadata-entry-and-search-tool",
@@ -6573,6 +6870,48 @@
     }
    ],
    "slug": "odam-software-suite"
+  },
+  "83": {
+   "title": "Colectica Designer",
+   "description": "Colectica Designer is a software application developed for the documentation and management of statistical research, surveys, and datasets. It is primarily utilized by statistical agencies, survey research groups, data archivists, longitudinal surveys, and public opinion researchers to create, manage, and share metadata for their research projects. The software facilitates the comprehensive documentation of research processes and data, adhering to open data standards such as DDI Codebook and DDI Lifecycle to ensure interoperability and long-term usability.",
+   "types": [
+    "graphical (Windows)"
+   ],
+   "locations": [
+    {
+     "url": "https://www.colectica.com/software/designer/",
+     "type": "website"
+    },
+    {
+     "url": "https://docs.colectica.com/designer/",
+     "type": "document"
+    }
+   ],
+   "slug": "colectica-designer"
+  },
+  "84": {
+   "title": "Colectica Repository and Portal",
+   "description": "Colectica Repository is a metadata management system designed to centrally store and manage metadata for research purposes, particularly for statistical agencies, survey research groups, longitudinal studies, and data archivists. It acts as the core infrastructure for the Colectica platform, enabling collaborative workflows and maintaining data integrity through version control. While not directly accessed by end-users, it supports applications like Colectica Designer and Colectica Portal via a REST api.\r\n\r\nThe repository adheres to open data standards to ensure data is reusable and interoperable. It natively uses the Data Documentation Initiative (DDI) Lifecycle metadata standard to document the entire research process, from planning to archiving. It also complies with ISO 11179, a standard for metadata registries, to structure metadata systematically. Additionally, an open REST API allows other systems to interact with the repository and resolve metadata items.",
+   "types": [
+    "web application",
+    "web service",
+    "terminal (cross-platform)"
+   ],
+   "locations": [
+    {
+     "url": "https://www.colectica.com/software/repository/",
+     "type": "website"
+    },
+    {
+     "url": "https://www.colectica.com/software/portal/",
+     "type": "website"
+    },
+    {
+     "url": "https://docs.colectica.com/repository/",
+     "type": "document"
+    }
+   ],
+   "slug": "colectica-repository-and-portal"
   }
  },
  "c": {
@@ -7477,7 +7816,8 @@
     "msc:g32",
     "msc:g53",
     "msc:g55",
-    "msc:g91"
+    "msc:g91",
+    "msc:g148"
    ],
    "maintainers": [
     "msc:g113"
@@ -7508,7 +7848,8 @@
     "msc:g90",
     "msc:g112",
     "msc:g121",
-    "msc:g125"
+    "msc:g125",
+    "msc:g148"
    ]
   },
   "16": {
@@ -7864,6 +8205,9 @@
    "@id": "msc:m63",
    "parent schemes": [
     "msc:m13"
+   ],
+   "users": [
+    "msc:g148"
    ]
   },
   "62": {
@@ -8824,7 +9168,10 @@
     "msc:m12",
     "msc:m95"
    ],
-   "@id": "msc:m101"
+   "@id": "msc:m101",
+   "users": [
+    "msc:g148"
+   ]
   },
   "191": {
    "parent schemes": [
@@ -8839,7 +9186,8 @@
   "192": {
    "@id": "msc:m95",
    "users": [
-    "msc:g125"
+    "msc:g125",
+    "msc:g148"
    ]
   },
   "193": {
@@ -9096,7 +9444,8 @@
     "msc:g143"
    ],
    "users": [
-    "msc:g20"
+    "msc:g20",
+    "msc:g148"
    ],
    "@id": "msc:m121"
   },
@@ -9207,6 +9556,80 @@
     "msc:m10"
    ],
    "@id": "msc:m128"
+  },
+  "230": {
+   "parent schemes": [
+    "msc:m12"
+   ],
+   "maintainers": [
+    "msc:g147"
+   ],
+   "funders": [
+    "msc:g145",
+    "msc:g147"
+   ],
+   "users": [
+    "msc:g147"
+   ],
+   "@id": "msc:m129"
+  },
+  "231": {
+   "parent schemes": [
+    "msc:m23"
+   ],
+   "@id": "msc:m130"
+  },
+  "232": {
+   "parent schemes": [
+    "msc:m23"
+   ],
+   "@id": "msc:m131"
+  },
+  "233": {
+   "supported schemes": [
+    "msc:m121",
+    "msc:m13",
+    "msc:m15",
+    "msc:m63"
+   ],
+   "maintainers": [
+    "msc:g148"
+   ],
+   "funders": [
+    "msc:g148",
+    "msc:g105"
+   ],
+   "@id": "msc:t83"
+  },
+  "234": {
+   "supported schemes": [
+    "msc:m121",
+    "msc:m13",
+    "msc:m15",
+    "msc:m63",
+    "msc:m95",
+    "msc:m101"
+   ],
+   "maintainers": [
+    "msc:g148"
+   ],
+   "funders": [
+    "msc:g148",
+    "msc:g105"
+   ],
+   "@id": "msc:t84"
+  },
+  "235": {
+   "parent schemes": [
+    "msc:m22"
+   ],
+   "@id": "msc:m133"
+  },
+  "236": {
+   "parent schemes": [
+    "msc:m9"
+   ],
+   "@id": "msc:m135"
   }
  }
 }
