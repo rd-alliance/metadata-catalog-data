@@ -713,22 +713,22 @@
   },
   "12": {
    "dataTypes": [
-    "msc:datatype2",
-    "msc:datatype1"
+    "msc:datatype1",
+    "msc:datatype2"
    ],
    "description": "<p>By using DCAT to describe datasets in data catalogs, publishers are using a standard model and vocabulary that facilitates the consumption and aggregation of metadata from multiple catalogs, and in doing so can increase the discoverability of datasets. It also makes it possible to have a decentralized approach to publishing data catalogs and makes federated search for datasets across catalogs in multiple sites possible using the same query mechanism and structure. Aggregated DCAT metadata can serve as a manifest file as part of the digital preservation process.</p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.w3.org/TR/vocab-dcat/"
+     "url": "http://www.w3.org/TR/vocab-dcat/",
+     "type": "website"
     },
     {
-     "type": "RDFS",
-     "url": "https://www.w3.org/ns/dcat.ttl"
+     "url": "https://www.w3.org/ns/dcat.ttl",
+     "type": "RDFS"
     },
     {
-     "type": "website",
-     "url": "https://www.w3.org/2017/dxwg/wiki/Main_Page"
+     "url": "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+     "type": "website"
     }
    ],
    "slug": "dcat-data-catalog-vocabulary",
@@ -1478,7 +1478,7 @@
    "title": "SDMX (Statistical Data and Metadata Exchange)"
   },
   "39": {
-   "description": "<p>An information model for describing the elements of the heliophysics data environment, and a set of resource types which can be used to describe data along with its scientific context, source, provenance, content and location. It is designed to support a federated data system where data may reside at different locations and may be seperated from the metadata which describes it. The preferred expression form is XML.</p><p>The Space Physics Archive Search and Extract (SPASE) effort is implemented by the SPASE Consortium which is composed of representatives of the international Heliophysics data community. The Current Release of the data model (2.2.9) was updated in January 2018.</p>",
+   "description": "<p>An information model for describing the elements of the heliophysics data environment, and a set of resource types which can be used to describe data along with its scientific context, source, provenance, content and location. It is designed to support a federated data system where data may reside at different locations and may be seperated from the metadata which describes it. The preferred expression form is XML.</p><p>The Space Physics Archive Search and Extract (SPASE) effort is implemented by the SPASE Consortium which is composed of representatives of the international Heliophysics data community.</p>",
    "keywords": [
     "http://vocabularies.unesco.org/thesaurus/concept151",
     "http://vocabularies.unesco.org/thesaurus/concept152",
@@ -1486,12 +1486,12 @@
    ],
    "locations": [
     {
-     "type": "document",
-     "url": "http://www.spase-group.org/docs/schema/"
+     "url": "https://spase-group.org/data/schema/index.html",
+     "type": "document"
     },
     {
-     "type": "website",
-     "url": "http://www.spase-group.org/data/"
+     "url": "http://www.spase-group.org/data/",
+     "type": "website"
     }
    ],
    "slug": "spase-data-model",
@@ -1558,14 +1558,14 @@
      "number": "2.2.7"
     },
     {
-     "issued": "2018-01-30",
+     "number": "2.2.9",
+     "issued": "2017-11-14",
      "locations": [
       {
-       "type": "document",
-       "url": "http://www.spase-group.org/data/model/spase-2_2_9.pdf"
+       "url": "http://www.spase-group.org/data/model/spase-2_2_9.pdf",
+       "type": "document"
       }
-     ],
-     "number": "2.2.9"
+     ]
     },
     {
      "issued": "2016-10-27",
@@ -1576,6 +1576,116 @@
       }
      ],
      "number": "2.2.8"
+    },
+    {
+     "number": "2.3.0",
+     "issued": "2018-05-31",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.3.0.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.3.1",
+     "issued": "2019-11-14",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.3.1.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.3.2",
+     "issued": "2020-10-15",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.3.2.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.4.0",
+     "issued": "2021-06-10",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.4.0.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.4.1",
+     "issued": "2022-05-19",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.4.1.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.4.2",
+     "issued": "2022-07-21",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.4.2.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.5.0",
+     "issued": "2022-08-29",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.5.0.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.6.0",
+     "issued": "2023-08-03",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.6.0.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.6.1",
+     "issued": "2024-10-07",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.6.1.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.7.0",
+     "issued": "2025-02-03",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.7.0.pdf",
+       "type": "document"
+      }
+     ]
+    },
+    {
+     "number": "2.7.1",
+     "issued": "2025-11-26",
+     "locations": [
+      {
+       "url": "https://spase-group.org/data/model/spase-2.7.1.pdf",
+       "type": "document"
+      }
+     ]
     }
    ]
   },
@@ -3930,6 +4040,33 @@
      "type": "website"
     }
    ]
+  },
+  "136": {
+   "title": "RDA DMP Common Standard for Machine-actionable Data Management Plans",
+   "description": "<p>Data Management Plans are free-form text documents describing the data that is used and produced during the course of research activities. They specify where the data will be archived, which licenses and constraints apply, and to whom credit should be given, etc. The workload and bureaucracy often associated with traditional DMPs can be reduced when they become machine-actionable.</p>\r\n\r\n\r\n<p>The DMP Common Standards WG has developed an application profile that allows to express information from traditional DMPs in a machine-actionable way. It allows for automatic exchange, integration, and validation of information provided in DMPs.</p>\r\n\r\n\r\n<p>Thus, it facilitates exchange of information between systems acting on behalf of stakeholders involved in the research life cycle, such as, researchers, funders, repository managers, ICT providers, librarians, etc.</p>",
+   "keywords": [
+    "http://rdamsc.bath.ac.uk/thesaurus/domain0"
+   ],
+   "dataTypes": [
+    "msc:datatype2"
+   ],
+   "locations": [
+    {
+     "url": "https://github.com/RDA-DMP-Common/RDA-DMP-Common-Standard",
+     "type": "document"
+    },
+    {
+     "url": "https://www.rd-alliance.org/groups/dmp-common-standards-wg/outputs/?output=94576",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "10.15497/rda00039",
+     "scheme": "DOI"
+    }
+   ],
+   "slug": "rda-dmp-common-standard-for-machine-actionable-data-management-plans"
   }
  },
  "g": {
@@ -4878,8 +5015,8 @@
    "description": "<p>The SPASE website's list of systems that use SPASE compliant metadata to enable search services.</p>",
    "locations": [
     {
-     "type": "website",
-     "url": "http://www.spase-group.org/spase-inside.jsp"
+     "url": "https://spase-group.org/spase-inside.html",
+     "type": "website"
     }
    ],
    "name": "SPASE Inside",
@@ -5687,6 +5824,50 @@
     }
    ],
    "slug": "colectica"
+  },
+  "149": {
+   "name": "Research Data Alliance",
+   "description": "<p>The Research Data Alliance (RDA) was launched as a community-driven initiative in 2013 with the vision that researchers and innovators can openly share and re-use data across technologies, disciplines, and countries to address the grand challenges of society.</p>\r\n\r\n<p>The RDA’s mission is to build the social and technical bridges that enable that vision, accomplished through the creation, adoption and use of the social, organisational, and technical infrastructure needed to reduce barriers to data sharing and exchange. Scientists & researchers join forces with technical experts in focused Working Groups, exploratory Interest Groups and Communities of Practice. Individual membership is free and open to all.</p>",
+   "types": [
+    "coordination group"
+   ],
+   "locations": [
+    {
+     "url": "https://www.rd-alliance.org/",
+     "type": "website"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "https://ror.org/05dc6w374",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "research-data-alliance"
+  },
+  "150": {
+   "name": "National Library of Technology",
+   "description": "The National Library of Technology (NTK) is the largest and the oldest library of science and technology literature in the Czech Republic, with a collection of almost 1 million volumes. Its primary function is to provide specialized information resources and services to students, teachers, and researchers in the fields of engineering and applied sciences, as well as to educate members of the general public interested in STEM information. NTK aims to be a top centre of information, providing academic and business services and thus support research, education and innovation on national and international levels.",
+   "types": [
+    "archive"
+   ],
+   "locations": [
+    {
+     "url": "https://www.techlib.cz/en/",
+     "type": "website"
+    },
+    {
+     "url": "mailto:info@techlib.cz",
+     "type": "email"
+    }
+   ],
+   "identifiers": [
+    {
+     "id": "028txef36",
+     "scheme": "ROR"
+    }
+   ],
+   "slug": "national-library-of-technology"
   }
  },
  "t": {
@@ -6793,7 +6974,7 @@
   },
   "81": {
    "title": "Maggot",
-   "description": "description: <p>Sharing descriptive Metadata is the first essential step towards Open Scientific Data. With this in mind, Maggot was specifically designed to annotate datasets by creating a metadata file to attach to the storage space. Indeed, it allows users to easily add descriptive metadata to datasets produced within a collective of people (research unit, platform, multi-partner project, etc.). This approach fits perfectly into a data management plan as it addresses the issues of data organization and documentation, data storage and frictionless metadata sharing within this same collective and beyond.",
+   "description": "Sharing descriptive Metadata is the first essential step towards Open Scientific Data. With this in mind, Maggot was specifically designed to annotate datasets by creating a metadata file to attach to the storage space. Indeed, it allows users to easily add descriptive metadata to datasets produced within a collective of people (research unit, platform, multi-partner project, etc.). This approach fits perfectly into a data management plan as it addresses the issues of data organization and documentation, data storage and frictionless metadata sharing within this same collective and beyond.",
    "types": [
     "web application"
    ],
@@ -6819,12 +7000,10 @@
    ],
    "creators": [
     {
-     "fullName": "Daniel Jacob",
      "givenName": "Daniel",
      "familyName": "Jacob"
     },
     {
-     "fullName": "François Ehrenmann",
      "givenName": "François",
      "familyName": "Ehrenmann"
     }
@@ -8102,10 +8281,7 @@
    ]
   },
   "46": {
-   "@id": "msc:m48",
-   "parent schemes": [
-    "msc:m12"
-   ]
+   "@id": "msc:m48"
   },
   "47": {
    "@id": "msc:m49",
@@ -9165,7 +9341,6 @@
   },
   "190": {
    "parent schemes": [
-    "msc:m12",
     "msc:m95"
    ],
    "@id": "msc:m101",
@@ -9461,9 +9636,6 @@
    "@id": "msc:m123"
   },
   "221": {
-   "parent schemes": [
-    "msc:m12"
-   ],
    "@id": "msc:m124",
    "maintainers": [
     "msc:g145"
@@ -9558,9 +9730,6 @@
    "@id": "msc:m128"
   },
   "230": {
-   "parent schemes": [
-    "msc:m12"
-   ],
    "maintainers": [
     "msc:g147"
    ],
@@ -9630,6 +9799,12 @@
     "msc:m9"
    ],
    "@id": "msc:m135"
+  },
+  "237": {
+   "@id": "msc:m136",
+   "maintainers": [
+    "msc:g149"
+   ]
   }
  }
 }
