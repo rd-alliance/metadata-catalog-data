@@ -4,20 +4,20 @@ from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import SKOS, RDF
 
 orig = Graph()
-orig.parse('unesco-thesaurus.ttl', format='turtle')
+orig.parse("unesco-thesaurus.ttl", format="turtle")
 
 g = Graph(namespace_manager=orig.namespace_manager)
-g.bind('uno', 'http://vocabularies.unesco.org/ontology#')
-UNO = Namespace('http://vocabularies.unesco.org/ontology#')
-UNT = Namespace('http://vocabularies.unesco.org/thesaurus/')
-unt = URIRef('http://vocabularies.unesco.org/thesaurus')
-msct = URIRef('http://rdamsc.bath.ac.uk/thesaurus')
-g.bind('msc', 'http://rdamsc.bath.ac.uk/thesaurus/')
-MSC = Namespace('http://rdamsc.bath.ac.uk/thesaurus/')
+g.bind("uno", "http://vocabularies.unesco.org/ontology#")
+UNO = Namespace("http://vocabularies.unesco.org/ontology#")
+UNT = Namespace("http://vocabularies.unesco.org/thesaurus/")
+unt = URIRef("http://vocabularies.unesco.org/thesaurus")
+msct = URIRef("http://rdamsc.bath.ac.uk/thesaurus")
+g.bind("msc", "http://rdamsc.bath.ac.uk/thesaurus/")
+MSC = Namespace("http://rdamsc.bath.ac.uk/thesaurus/")
 
 
 def expunge(node: URIRef):
-    '''Remove a node and all descendent nodes.'''
+    """Remove a node and all descendent nodes."""
     children = g.objects(node, SKOS.narrower)
     for child in children:
         expunge(child)
@@ -26,8 +26,8 @@ def expunge(node: URIRef):
 
 
 def prune(node: URIRef):
-    '''Removes a node, makes all child nodes descend directly
-    from the parent.'''
+    """Removes a node, makes all child nodes descend directly
+    from the parent."""
     parents = g.objects(node, SKOS.broader)
     parent = None
     for p in parents:
@@ -44,10 +44,10 @@ def prune(node: URIRef):
 
 
 def replace(old: URIRef, new: URIRef, label: str):
-    '''Removes old node, gives new node the same type and relationships
-    as the old one, and gives it the new preferred label.'''
+    """Removes old node, gives new node the same type and relationships
+    as the old one, and gives it the new preferred label."""
     g.add((new, RDF.type, SKOS.Concept))
-    g.add((new, SKOS.prefLabel, Literal(label, lang='en')))
+    g.add((new, SKOS.prefLabel, Literal(label, lang="en")))
     for p in [SKOS.broader, SKOS.narrower]:
         for o in g.objects(old, p):
             g.add((new, p, o))
@@ -58,8 +58,8 @@ def replace(old: URIRef, new: URIRef, label: str):
 
 
 def subsume(old: URIRef, new: URIRef):
-    '''Removes old node, copying its has-narrower/is-broader-than
-    relationships to apply to the new node.'''
+    """Removes old node, copying its has-narrower/is-broader-than
+    relationships to apply to the new node."""
     for o in g.objects(old, SKOS.narrower):
         g.add((new, SKOS.narrower, o))
     for s in g.subjects(SKOS.broader, old):
@@ -69,14 +69,14 @@ def subsume(old: URIRef, new: URIRef):
 
 
 g.add((msct, RDF.type, SKOS.ConceptScheme))
-g.add((msct, SKOS.prefLabel, Literal("RDA MSC Thesaurus", lang='en')))
+g.add((msct, SKOS.prefLabel, Literal("RDA MSC Thesaurus", lang="en")))
 g.add((UNT.domain0, RDF.type, UNO.Domain))
-g.add((UNT.domain0, SKOS.prefLabel, Literal("Multidisciplinary", lang='en')))
+g.add((UNT.domain0, SKOS.prefLabel, Literal("Multidisciplinary", lang="en")))
 
-print('Cherry-picking the triples used by the app...')
+print("Cherry-picking the triples used by the app...")
 labels = orig.triples((None, SKOS.prefLabel, None))
 for s, p, o in labels:
-    if o.language == 'en':
+    if o.language == "en":
         g.add((s, p, o))
 g += orig.triples((None, RDF.type, SKOS.Concept))
 g += orig.triples((None, RDF.type, UNO.MicroThesaurus))
@@ -88,61 +88,62 @@ g += orig.triples((None, SKOS.narrower, None))
 
 # We convert domains to top-level concepts
 for s, p, o in orig.triples((None, SKOS.member, None)):
-    if (o, RDF.type, SKOS.Concept) in orig and (
-            o, SKOS.topConceptOf, unt) not in orig:
+    if (o, RDF.type, SKOS.Concept) in orig and (o, SKOS.topConceptOf, unt) not in orig:
         continue
     g.add((s, SKOS.narrower, o))
     g.add((o, SKOS.broader, s))
 
 # Now rename domains into RDA MSC namespace:
 id_map = {
-    'domain3': "Arts and humanities",  # was Culture
-    'domain7': "National and regional standards",  # was Countries and country groupings
-    }
+    "domain3": "Arts and humanities",  # was Culture
+    "domain7": "National and regional standards",  # was Countries and country groupings
+}
 for d in g.subjects(RDF.type, UNO.Domain):
-    label = str(g.preferredLabel(d, lang='en')[0][1])
-    id = str(d.n3(g.namespace_manager)).replace(':', '')
+    label = str(g.preferredLabel(d, lang="en")[0][1])
+    id = str(d.n3(g.namespace_manager)).replace(":", "")
     # Apply exceptions...
     label = id_map.get(id, label)
     replace(UNT[id], MSC[id], label)
     g.add((MSC[id], SKOS.topConceptOf, msct))
 
-expunge(UNT['mt3.35'])  # Languages (family tree of specific ones)
-subsume(UNT['mt2.65'], UNT['mt2.55'])  # Natural resources -> Environmental sciences and engineering
+expunge(UNT["mt3.35"])  # Languages (family tree of specific ones)
+subsume(
+    UNT["mt2.65"], UNT["mt2.55"]
+)  # Natural resources -> Environmental sciences and engineering
 id_map = {
-    'mt2.70': "Biological sciences",  # was Biology
-    'mt6.35': "Agriculture and related",  # was Agriculture
-    'mt1.65': "Educational assessment",  # was Educational evaluation
-    'mt1.10': "Educational policy and development",  # was Educational policy
-    'mt3.25': "Historical studies",  # was History
-    'mt2.80': "Medicine and health",  # was Medical sciences
-    'mt2.45': "Atmospheric sciences",  # was Meteorology
-    }
+    "mt2.70": "Biological sciences",  # was Biology
+    "mt6.35": "Agriculture and related",  # was Agriculture
+    "mt1.65": "Educational assessment",  # was Educational evaluation
+    "mt1.10": "Educational policy and development",  # was Educational policy
+    "mt3.25": "Historical studies",  # was History
+    "mt2.80": "Medicine and health",  # was Medical sciences
+    "mt2.45": "Atmospheric sciences",  # was Meteorology
+}
 for mt in g.subjects(RDF.type, UNO.MicroThesaurus):
-    label = str(g.preferredLabel(mt, lang='en')[0][1])
-    id = str(mt.n3(g.namespace_manager)).replace(':', '')
-    newid = id.replace('mt', 'subdomain').replace('.', '')
+    label = str(g.preferredLabel(mt, lang="en")[0][1])
+    id = str(mt.n3(g.namespace_manager)).replace(":", "")
+    newid = id.replace("mt", "subdomain").replace(".", "")
     # Apply exceptions...
     label = id_map.get(id, label)
     replace(UNT[id], MSC[newid], label)
 
 # Prune and ensure all remaining labels are unique
 for s, p, o in orig.triples((None, SKOS.scopeNote, None)):
-    if o.language == 'en':
+    if o.language == "en":
         do_not_use = "Use more specific descriptor."
         if do_not_use in str(o):
             prune(s)
 prune(UNT.concept688)  # Africa
 prune(UNT.concept813)  # Asia and the Pacific
-prune(UNT.concept49)   # Curriculum
+prune(UNT.concept49)  # Curriculum
 prune(UNT.concept157)  # Earth sciences
 prune(UNT.concept594)  # Economic and social development
 prune(UNT.concept585)  # Economics
-prune(UNT.concept21)   # Educational administration
-prune(UNT.concept95)   # Educational facilities
-prune(UNT.concept44)   # Educational institutions
-prune(UNT.concept31)   # Educational management
-prune(UNT.concept14)   # Educational planning
+prune(UNT.concept21)  # Educational administration
+prune(UNT.concept95)  # Educational facilities
+prune(UNT.concept44)  # Educational institutions
+prune(UNT.concept31)  # Educational management
+prune(UNT.concept14)  # Educational planning
 prune(UNT.concept901)  # Europe
 prune(UNT.concept434)  # Family
 prune(UNT.concept557)  # Human rights
@@ -171,14 +172,14 @@ prune(UNT.concept402)  # Social systems
 prune(UNT.concept154)  # Space sciences
 prune(UNT.concept347)  # Visual arts
 
-print('Writing simplified thesaurus.')
-g.serialize('simplified-thesaurus.ttl', format='turtle')
+print("Writing simplified thesaurus.")
+g.serialize("simplified-unesco-thesaurus.ttl", format="turtle")
 
 unique_labels = list()
 labelholders = dict()
 
 for d in g.subjects(SKOS.topConceptOf, msct):
-    label = str(g.preferredLabel(d, lang='en')[0][1])
+    label = str(g.preferredLabel(d, lang="en")[0][1])
     id = str(d.n3(g.namespace_manager))
     if label not in unique_labels:
         unique_labels.append(label)
@@ -186,7 +187,7 @@ for d in g.subjects(SKOS.topConceptOf, msct):
     else:
         labelholders[label].append(id)
     for mt in g.objects(d, SKOS.narrower):
-        label = str(g.preferredLabel(mt, lang='en')[0][1])
+        label = str(g.preferredLabel(mt, lang="en")[0][1])
         id = str(mt.n3(g.namespace_manager))
         if label not in unique_labels:
             unique_labels.append(label)
@@ -194,7 +195,7 @@ for d in g.subjects(SKOS.topConceptOf, msct):
         else:
             labelholders[label].append(id)
         for c in g.objects(mt, SKOS.narrower):
-            label = str(g.preferredLabel(c, lang='en')[0][1])
+            label = str(g.preferredLabel(c, lang="en")[0][1])
             id = str(c.n3(g.namespace_manager))
             if label not in unique_labels:
                 unique_labels.append(label)
@@ -215,7 +216,7 @@ for label in sorted(labelholders.keys()):
         print()
 
 
-def termtree(parent_uri: URIRef=None, level=0):
+def termtree(parent_uri: URIRef = None, level=0):
     tree = list()
     if parent_uri:
         uris = g.objects(parent_uri, SKOS.narrower)
@@ -225,7 +226,7 @@ def termtree(parent_uri: URIRef=None, level=0):
         return tree
     entries = list()
     for uri in uris:
-        label = str(g.preferredLabel(uri, lang='en')[0][1])
+        label = str(g.preferredLabel(uri, lang="en")[0][1])
         id = str(uri.n3(g.namespace_manager))
         entries.append((uri, label, id))
     entries.sort(key=lambda k: k[1])
@@ -238,5 +239,5 @@ def termtree(parent_uri: URIRef=None, level=0):
 
 
 print("Writing out test hierarchy...")
-with open('keyword_tree.md', 'w') as f:
+with open("keyword_tree.md", "w") as f:
     f.writelines(termtree())
